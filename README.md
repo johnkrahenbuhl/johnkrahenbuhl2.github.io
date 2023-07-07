@@ -142,6 +142,13 @@ section {
   animation: fadeEffect 1s;
 }
 
+    iframe{
+      width:330px;
+      height:700px;
+      border:none;
+      overflow:hidden;
+    }
+  
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
@@ -260,7 +267,7 @@ We show the data in this tab.
     <h3>Tokyo</h3>
     <p>Tokyo is the capital of Japan.</p>
         <center><h1>Embedding Expo Snacks With Only The Output </h1>
-    <iframe src = "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40jothamsamuel%2Fhtmlview%2BBECEXjHOGk&scale=81&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B%22EXDevMenuDisableAutoLaunch%22%3Atrue%2C%22EXKernelLaunchUrlDefaultsKey%22%3A%22exp%3A%2F%2Fexp.host%2F%40jothamsamuel%2Fhtmlview%2BBECEXjHOGk%22%2C%22EXKernelDisableNuxDefaultsKey%22%3Atrue%7D&osVersion=11.0" ></iframe></center>
+    <iframe src = "[https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40jothamsamuel%2Fhtmlview%2BBECEXjHOGk&scale=81&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B%22EXDevMenuDisableAutoLaunch%22%3Atrue%2C%22EXKernelLaunchUrlDefaultsKey%22%3A%22exp%3A%2F%2Fexp.host%2F%40jothamsamuel%2Fhtmlview%2BBECEXjHOGk%22%2C%22EXKernelDisableNuxDefaultsKey%22%3Atrue%7D&osVersion=11.0](https://appetize.io/embed/8bnmakzrptf1hv9dq7v7bnteem?autoplay=false&debug=true&device=iphone12&deviceColor=black&embed=true&orientation=portrait&scale=72&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B%22EXDevMenuDisableAutoLaunch%22%3Atrue%2C%22EXKernelLaunchUrlDefaultsKey%22%3A%22exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.48.0.0-dYHibfaeNK%22%2C%22EXKernelDisableNuxDefaultsKey%22%3Atrue%7D)" ></iframe></center>
   </div>
 </div>
       </section>
