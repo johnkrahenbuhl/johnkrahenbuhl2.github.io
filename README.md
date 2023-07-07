@@ -16,7 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('section[id]').forEach((section) => {
     observer.observe(section);
   });
-    
+  
+});
 </script>
 
 # johnkrahenbuhl2.github.io
