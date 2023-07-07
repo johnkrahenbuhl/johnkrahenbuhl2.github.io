@@ -1,6 +1,6 @@
 ---
-permalink: /build/styleguideline/
-title: "Style Guideline"
+permalink: ../README.md
+title: "Test README for GitHub Sites"
 classes: wide
 sidebar:
   nav: "docs"
