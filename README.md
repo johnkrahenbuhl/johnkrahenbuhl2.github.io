@@ -228,7 +228,7 @@ We show the data in this tab.
       </section>
       <section id="endpoints--city-icon-detail">
         <h3>City Icon Detail</h3>
-        <h2>Tabs</h2>
+        <h2>#Tabs</h2>
 <p>Click on the buttons inside the tabbed menu:</p>
 
 <div>
@@ -237,7 +237,6 @@ We show the data in this tab.
     <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
     <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
   </div>
-  <hr>
   <br>
   <div id="London" class="tabcontent">
     <h3>London</h3>
