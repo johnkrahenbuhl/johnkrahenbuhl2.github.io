@@ -1,12 +1,3 @@
----
-permalink: ../README.md
-title: "Test README for GitHub Sites"
-classes: wide
-sidebar:
-  nav: "docs"
----
-
-
 
 # johnkrahenbuhl2.github.io
 Public Test for React JS
