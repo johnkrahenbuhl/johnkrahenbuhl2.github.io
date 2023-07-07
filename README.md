@@ -237,7 +237,8 @@ We show the data in this tab.
     <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
     <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
   </div>
-  
+  <hr>
+  <br>
   <div id="London" class="tabcontent">
     <h3>London</h3>
     <p>London is the capital city of England.</p>
