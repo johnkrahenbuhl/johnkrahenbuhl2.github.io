@@ -228,7 +228,7 @@ We show the data in this tab.
       </section>
       <section id="endpoints--city-icon-detail">
         <h3>City Icon Detail</h3>
-        <h2>#Tabs</h2>
+        <h2>Tabs</h2>
 <p>Click on the buttons inside the tabbed menu:</p>
 
 <div>
