@@ -1,5 +1,4 @@
 <script>
-
 window.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver(entries => {
@@ -19,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
     
 </script>
+
 # johnkrahenbuhl2.github.io
 Public Test for React JS
 What is going on with this?
