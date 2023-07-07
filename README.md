@@ -104,6 +104,13 @@ section {
   padding-bottom: 20rem;
 }
 
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+  
  /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
