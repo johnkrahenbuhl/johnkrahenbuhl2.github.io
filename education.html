@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>John Henry Krahenbuhl's Portfolio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+      <link rel="manifest" href="images/site.webmanifest">
+      <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Roboto&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <!--load all styles -->
+      <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.min.css">
+      <style>
+         html {
+         }
+         body::before {
+         content: "";
+         display: block;
+         position: fixed;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -10;
+         background: url("images/home_background_high.png") no-repeat center center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         }
+         body {
+         min-width: 350px;
+         margin: 0;
+         }
+         .navbar {
+         background-image: url("images/HeaderBackgroundImage.png");
+         width: 100%;
+         margin: 0;
+         /* Center and scale the image nicely */
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         }
+         .bg {
+         /* Full height */
+         height: calc(100vh - 60px);
+         min-height: calc(100vh - 580px);
+         }
+         .row, .flex-row {
+         display: flex;
+         display: -webkit-flex; 
+         flex-wrap:wrap;
+         -webkit-flex-wrap: wrap;
+         }
+         .flex-row-center {
+         -webkit-justify-content: center;
+         justify-content: center;
+         }         
+         .flex-row-left {
+         -webkit-justify-content: left;
+         justify-content: left;
+         }
+         .row:before, .row:after
+         .flex-row:before, .flex-row:after,
+         .flex-row-left:before, .flex-row-left:after,
+         .flex-row-center:before, .flex-row-center:after
+         {
+         display: none;
+         }
+         hr {
+         border-color: rgba(255, 255, 255, .95);
+         }
+         h1 {
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         /* text-shadow: 1px 2px 2px #4a4a4a; */
+         }
+         h2,
+         h3,
+         h4,
+         h5,
+         h6 {
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         /* text-shadow: 1px 2px 2px #4a4a4a; */
+         }
+         .jumbotron, 
+         .jumbotron-fluid {
+         background-color:transparent !important; 
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1.jumbotron, 
+         .background-light1.jumbotron-fluid {
+         background-color:rgba(40, 40, 60, 0.85) !important;
+         backdrop-filter: blur(5px); 
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         /* CSS for Left Sidebar and Sidebar Link / Pseudo-classes */
+         /*
+         * Sidebar
+         */
+         .sidebar {
+         position: fixed;
+         top: 60px;
+         bottom: 0;
+         left: 0px; /* 16px */
+         min-height: 300px; 
+         padding: 0;
+         z-index: 100;
+         /* Behind the navbar */
+         box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+         }
+         /* Test for Thin Sidebar */
+         .miniSidebar {
+         position: fixed;
+         top: 60px;
+         bottom: 0px;
+         left: 0px;  /* 10px */
+         padding: 0;
+         /* width: 53px; */
+         min-height: 300px;
+         z-index: 100;
+         /* Behind the navbar */
+         box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+         }
+         .sidebar-sticky {
+         position: -webkit-sticky;
+         position: sticky;
+         bottom: 0px;
+         /* Height of navbar */
+         height: calc(100vh - 60px);
+         padding-top: .5rem;
+         overflow-x: hidden;
+         overflow-y: auto;
+         /* Scrollable contents if viewport is shorter than content. */
+         }
+         .miniSidebar-sticky {
+         position: -webkit-sticky;
+         position: sticky;
+         top: 60px;
+         /* Height of navbar */
+         height: calc(100vh - 60px);
+         padding-top: 2.5rem;
+         overflow-x: hidden;
+         overflow-y: auto;
+         /* Scrollable contents if viewport is shorter than content. */
+         }
+         div.sidebar-sticky,
+         div.miniSidebar-sticky {
+         font-size: 1.25rem;
+         }
+         #sidebar,
+         #miniSidebar {
+         /* width: 275px;  */
+         /* margin-bottom: 1.5em; */
+         background-color: rgba(77, 114, 176, .5);
+         }
+         #mobileSidebar {
+         /* width: 275px;  */
+         /* margin-bottom: 1.5em; */
+         background-color: rgba(77, 114, 176, 1);
+         }
+         #sidebar a,
+         #miniSidebar a,
+         #mobileSidebar a,
+         a.mobile.nav-link.menu-item {
+         -webkit-text-fill-color: rgba(196, 212, 235, 1); 
+         -webkit-opacity: 1; 
+         color: rgba(196, 212, 235, 1);
+         }
+         a {
+         -webkit-text-fill-color: rgba(196, 212, 235, 1); 
+         -webkit-opacity: 1;         
+         color: rgba(196, 212, 235,1);
+         }
+         #navbar-brand-headshotLockup:hover,
+         #navbar-brand-mail a:hover,
+         #navbar-brand-linkedin a:hover
+         {
+         -webkit-opacity: .6;
+         opacity: .6;
+         }
+         a:hover
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1; 
+         color: rgb(255, 255, 255);
+         opacity: 1.0;
+         }
+         #sidebar a:hover,
+         #miniSidebar a:hover,
+         #mobileSidebar a:hover,
+         li.nav-item a:hover,
+         li.nav-item.mt-3 a:hover
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1;
+         color: rgba(255, 255, 255, 1);
+         }
+         #sidebar a.nav-link.active,
+         #miniSidebar a.nav-link.active,
+         #mobileSidebar a.nav-link.active {
+         -webkit-text-fill-color: rgba(255, 255, 255, .90); 
+         -webkit-opacity: .90;
+         color: rgba(255, 255, 255, .90);
+         }
+         .nav > .nav-link.active {
+         -webkit-text-fill-color: rgba(255, 255, 255, .90); 
+         -webkit-opacity: .90;
+         color: rgba(255, 255, 255, .90);
+         }
+         div a img:hover {
+         -webkit-text-fill-color: rgba(0,0,0, 1.0); 
+         -webkit-opacity: 1.0;
+         opacity: 1.0;
+         background-color: rgba(0, 0, 0, 1.0);
+         }
+         .fa,
+         .mainHeader,
+         i.fas.fa-bars {
+         -webkit-text-fill-color: rgba(255, 255, 255, .85); 
+         -webkit-opacity: .85;
+         color: rgba(255, 255, 255, .85);
+         }
+         /* For xs, sm screen size: Location optimized and best at this time use x4 for final build */
+         a[class*="xs-sm-Testx4"] {
+         display: inline-block;
+         height: 44px;
+         background: url("images/jk-headshot-x4.png") no-repeat;
+         margin-left: 24px;
+         /* background-position-x: 48px; */
+         background-position-y: center;
+         background-size: 44px 44px;
+         /* padding-left:59px; */
+         text-decoration: none;
+         font-size: 12px;
+         font-family: 'Roboto', sans-serif;
+         line-height: 12px;
+         padding-top: 6px;
+         }
+         a[class*="xs-sm-Testx4"]>span {
+         margin-left: 48px;
+         padding-left: 6px;
+         }
+         a[class*="xs-sm-Testx4"]>span>h1 {
+         font-size: 20px;
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         line-height: 20px;
+         padding-left: 48px;
+         }
+         /* End: For xs, sm screen size: Location optimized and best at this time x4 for final build */
+         /* For md screen size and above: Location optimized and best at this time use x4 for final build */
+         a[class*="Testx4lg"] {
+         display: inline-block;
+         height: 44px;
+         background: url("images/jk-headshot-x4.png") no-repeat left center;
+         background-size: 44px 44px;
+         padding-left: 59px;
+         text-decoration: none;
+         font-size: 12px;
+         font-family: 'Roboto', sans-serif;
+         line-height: 12px;
+         padding-top: 6px;
+         }
+         a[class*="Testx4lg"]>span {
+         margin-left: -5px;
+         }
+         a[class*="Testx4lg"]>span>h1 {
+         font-size: 20px;
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         line-height: 20px;
+         margin-left: -11px;
+         }
+         /* End: For md screen size and above: Location optimized and best at this time x4 for final build */
+         /* Set top of Responsive Background image as Header Background */
+         div.header {
+         background-image: url("images/home_background_high.png");
+         /* background-image: url("Patent.png"); */
+         /* corrects small inline gap at bottom of containing div */
+         display: block;
+         width: 100%;
+         /* corrects obscure Firefox bug */
+         max-width: 100%;
+         /* just in case, to force correct aspect ratio */
+         height: auto !important;
+         display: block;
+         /* corrects small inline gap at bottom of containing div */
+         width: 100%; /* corrects obscure Firefox bug */
+         max-width: 100%;
+         /* just in case, to force correct aspect ratio */
+         height: auto !important;
+         /*width: auto\9; 
+         /* ie8+9 - use modernizr instead of this \9 hack */
+         /* lt ie8 */
+         -ms-interpolation-mode: bicubic;
+         /* optionally force a minimum size if img src size is known: */
+         /* min-height: 320px; /* max-height of .crop-height */
+         /* min-width: 480px; /* proportional to above */
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         padding: 0px;
+         max-height: 60px;
+         /*	overflow: hidden; */
+         }
+         main {
+         top: 60px;
+         }
+         .nav-pills, 
+         a#pills-professional-tab.nav-link,
+         a#pills-resume-tab.nav-link {
+         /* background-color: rgba(77, 114, 176, .5); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .75); 
+         -webkit-opacity: .75;
+         color: rgba(255, 255, 255, .75);
+         }
+         a#pills-professional-tab.nav-link:hover,
+         a#pills-resume-tab.nav-link:hover {
+         /* background-color: rgba(77, 114, 176, .5); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .85); 
+         -webkit-opacity: .85;
+         color: rgba(255, 255, 255, .85);
+         background-color: rgba(77, 114, 176, .9); /* Blue */
+         /* background-color: rgba(93, 75, 66, .8); */ /* Brown */
+         }         
+         a#pills-professional-tab.nav-link.active,
+         a#pills-resume-tab.nav-link.active {
+         /* background-color: rgba(77, 114, 176, .5); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         background-color: rgba(77, 114, 176, .6);  /*   Blue */
+         /* background-color: rgba(93, 75, 66, .9); */ /* Brown */
+         }
+         .footer {
+         /*  position: fixed; */
+         left: 0;
+         bottom: 0px;
+         width: 100%;
+         height: 20px;
+         -webkit-text-fill-color: rgba(255, 255, 255, .50); 
+         -webkit-opacity: .50;
+         color: rgba(255, 255, 255, .5);
+         text-align: center;
+         padding-top: 57px;
+         }
+         .footer-text {
+         font-size: .3em
+         }
+         /* Small devices (landscape phones, less than 768px) */
+         @media screen and (max-width: 767px) {
+         .lg-top-navbar {
+         display: none;
+         }
+         }
+         /* Medium devices (tablets, 768px and up) */
+         @media screen and (min-width: 768px) {
+         .lg-top-navbar {
+         display: flex;
+         }
+         }
+         
+                               /* clamping styles
+  ------------------------------------------- */
+  .clamped {
+    background-color: rgba(77, 114, 176, 1);
+             z-index: -11;
+    left: 0;
+    right: 0;
+    height: 200px;
+/*    border: 3px dashed blue;
+    color:#fff; */
+  }
+  .clamped--top {
+    top: 0;
+  }
+  .clamped--bottom {
+    bottom: 0;
+  }
+  .clamped--fixed {
+    position: fixed
+  } 
+      </style>
+   </head>
+   <body class="bg">
+      <div class="header fixed-top">
+         <!--  Visibile xs, sm only  -->
+         <nav class="d-md-none navbar navbar-expand-sm navbar-dark justify-content-start" style="min-width: 400px;">
+            <!-- Brand -->
+            <ul class="d-inline-block nav navbar-nav flex-row">
+               <!--         <li class="nav-item"><a class="nav-link d-none d-md-block" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank"><i class="fas fa-envelope" style="font-size: 1.5em; margin-left: 1.5em;"></i></a> </li>
+                  -->
+               <!-- Toggler/collapsibe List Item with Dropdown-->
+               <div class="bs-example mr-2">
+                  <!-- Toggler/collapsibe List Item -->
+                  <div class="dropdown mt-2">
+                     <a href="#" class="nav-item" data-toggle="collapse" data-target="#mobileSidebar"><i class="fas fa-bars pb-2" style="font-size: 1.5em;"></i></a>
+                     <!-- Dropdown Navbar links -->
+                     <!-- Only visible on sm, lg: smaller devices by using visible-xs, visible-sm, etc... -->
+                  </div>
+               </div>
+            </ul>
+            <a class="xs-sm-Testx4 navbar-brand align-middle" id="navbar-brand-headshotLockup" href="home.html">
+               <span>
+                  Innovation + Expertise = Results
+                  <h1 class="fullName">John Henry Krahenbuhl</h1>
+               </span>
+            </a>
+         </nav>
+         <!--  Visibile md and larger  -->
+         <nav class="lg-top-navbar navbar row navbar-dark">
+            <!-- Brand -->
+            <a class="Testx4lg navbar-brand" id="navbar-brand-headshotLockup" href="home.html">
+               <span>
+                  Innovation + Expertise = Results
+                  <h1>John Henry Krahenbuhl</h1>
+               </span>
+            </a>
+            <ul class="nav navbar-nav row flex-row justify-content-md-center justify-content-start flex-nowrap ml-auto">
+               <li class="nav-item" id="navbar-brand-mail"><a class="nav-link" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank"><i class="mainHeader fas fa-envelope  .d-none" style="font-size: 1.5em; margin-right: 24px;"></i></a> </li>
+               <li class="nav-item ml-3" id="navbar-brand-linkedin"><a class="nav-link" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank"><i class="mainHeader fab fa-linkedin" style="font-size: 1.5em; margin-right: 48px;"></i></a> </li>
+            </ul>
+         </nav>
+      </div>
+      <!-- Start - Left Nav From Bootstrap Example -->
+      <div class="container-fluid">
+         <!-- To be shown when Experience Page loads -->
+         <div id="sideNavContent" class="row">
+            <div class="col ml-3 h-100">
+               <!--  Main Page Content goes here -->
+               <!-- Dropdown Navbar links -->
+               <!-- Only visible on sm, lg: smaller devices by using visible-xs, visible-sm, etc... -->
+               <!-- Hamburger / Mobile Nav menu viewports  -->
+               <nav class="col-12 collapse d-md-none sidebar" id="mobileSidebar">
+                  <div class="sidebar-sticky">
+                     <ul class="nav flex-column font-weight-bold" id="sidebar-ul-mobile">
+                        <li class="nav-item mt-3">
+                           <a class="nav-link menu-item" href="experience.html" data-index="0">
+                           <i class="fas fa-handshake" style="margin-left: -1px; margin-right: 7px;"></i> Experience <span class="sr-only">(current)</span>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="patents.html" data-index="1">
+                           <i class="fas fa-lightbulb" style="margin-left: 4px; margin-right: 14px;"></i> Patents
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="publications.html" data-index="2">
+                           <i class="fas fa-book-open" style="margin-left: -1px; margin-right: 8px;"></i> Publications
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link  menu-item active" href="education.html" data-index="3">
+                           <i class="fas fa-user-graduate" style="margin-left: 2.5px; margin-right: 11px;"></i> Education
+                           </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                           <a class="mobile nav-link menu-item" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank">
+                           <i class="fas fa-envelope" style="margin-left: 2.5px; margin-right: 11px;"></i> Send Email
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="mobile nav-link menu-item" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank">
+                           <i class="fab fa-linkedin" style="margin-left: 4px; margin-right: 11px;"></i> View LinkedIn
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+               <!-- Hamburger Nav menu for Xs, Sm viewports  -->
+               <nav class="col-2 collapse d-md-none sidebar" id="sidebar">
+                  <div class="sidebar-sticky">
+                     <ul class="nav flex-column font-weight-bold" id="sidebar-ul-xs">
+                        <li class="nav-item mt-3">
+                           <a class="nav-link menu-item" href="experience.html" data-index="0">
+                           <i class="fas fa-handshake" style="margin-left: -1px; margin-right: 7px;"></i> Experience <span class="sr-only">(current)</span>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="patents.html" data-index="1">
+                           <i class="fas fa-lightbulb" style="margin-left: 4px; margin-right: 14px;"></i> Patents
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="publications.html" data-index="2">
+                           <i class="fas fa-book-open" style="margin-left: 2px; margin-right: 8px;"></i> Publications
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item active" href="education.html" data-index="3">
+                           <i class="fas fa-user-graduate" style="margin-left: 5px; margin-right: 11px;"></i> Education
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+               <!-- Only visible on sm, lg: smaller devices by using visible-xs, visible-sm, etc... -->
+               <nav class="col-sm-1 d-none d-md-block d-lg-none miniSidebar" id="miniSidebar">
+                  <div class="miniSidebar-sticky sticky-top">
+                     <ul class="nav flex-column font-weight-bold" id="sidebar-ul-mini" style="font-size: 1.15em">
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="experience.html"  data-index="0" style=" margin-top: -30px; margin-left: 12px; padding-left: .75rem;">
+                           <i class="fas fa-handshake"></i>
+                           <span class="sr-only">(current)</span>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-1 pt-2">
+                           <a class="nav-link menu-item" href="patents.html"  data-index="1" style="margin-left: 12px; padding-left: 1.15rem;">
+                           <i class="fas fa-lightbulb"></i>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-2 pt-1" style="margin-left: 9px; padding-left: 0rem;">
+                           <a class="nav-link menu-item" href="publications.html" data-index="2">
+                           <i class="fas fa-book-open"></i>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-3" style="padding-left: 12.5px;">
+                           <a class="nav-link  menu-item active" href="education.html" data-index="3">
+                           <i class="fas fa-user-graduate"></i>
+                           </a>
+                        </li>
+                        <!--                           
+                           <span class="my-3 w-100"></span>
+                           <li class="nav-item mt-4 text-center">
+                               <a class="nav-link" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank">
+                                   <i class="fas fa-envelope"></i>
+                               </a>
+                           </li>
+                           <li class="nav-item mt-4 text-center">
+                               <a class="nav-link" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank">
+                                   <i class="fab fa-linkedin"></i>
+                               </a>
+                           </li>
+                           -->                          
+                     </ul>
+                  </div>
+               </nav>
+               <!-- Nav Menu for Lg and Xl viewports -->
+               <nav class="col-md-4 col-lg-3 col-xl-2 d-none d-lg-block sidebar" id="sidebar">
+                  <div class="sidebar-sticky">
+                     <ul class="nav flex-column font-weight-bold" id="sidebar-ul-lg">
+                        <li class="nav-item mt-3">
+                           <a class="nav-link menu-item" href="experience.html"  data-index="0">
+                           <i class="fas fa-handshake" style="margin-left: 10px; margin-right: 7px;"></i> Experience <span class="sr-only">(current)</span>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="patents.html" data-index="1">
+                           <i class="fas fa-lightbulb" style="margin-left: 16px; margin-right: 13px;"></i> Patents
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="publications.html" data-index="2">
+                           <i class="fas fa-book-open" style="margin-left: 11px; margin-right: 8px;"></i> Publications
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item active" href="education.html" data-index="3">
+                           <i class="fas fa-user-graduate" style="margin-left: 15px; margin-right: 10px;"></i> Education
+                           </a>
+                        </li>
+                     </ul>
+                     <!-- Example Section Heading 
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                          <span>Saved reports</span>
+                          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                          </a>
+                        </h6>
+                        -->
+                  </div>
+               </nav>
+               <!--  End Main Page Content goes here -->
+            </div>
+            <!-- Setup for the Main Section -->
+            <div id="mainPageContent" class="content offset-md-1 col-md-11 offset-lg-3 col-lg-9 offset-xl-2 col-xl-10 mt-5 text-left text-white" style="background-color: rgba(255,255,255,.15);" style="margin-top: 75px;">
+               <!-- Breadcrumb Area -->
+                              <!-- XS Only -->
+                              <!--
+               <div class="row col d-block d-sm-none text-center ml-5 pl-1">
+                  <div class="mb-5" style="position:fixed; top:60px; z-index:100;">
+                     <div class="col-12" style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+
+
+                        <h1 class="h6 small col d-block d-sm-none pt-1 pb-1" style="filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;">Education:&ensp;<strong>Master of Design Methods</strong></h1>
+                     </div>
+                  </div>
+               </div>
+                                       -->
+               <!-- SM Only -->
+               <!--
+               <div class="row d-none d-sm-block d-md-none text-center ml-5 pl-1">
+                  <div class="mb-5" style="position:fixed; top:60px; z-index:100;">
+                     <div style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+
+                        <h1 class="h6 small col d-none d-sm-block d-md-none pt-1 pb-1" style="filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-user-graduate" style="margin-left: 4px; margin-right: 13px;"></i>Education:&ensp;<strong>Master of Design Methods</strong></h1>
+                     </div>
+                  </div>
+               </div>
+               -->
+               <!-- MD Only 70px -->
+               <!--
+               <div class="row d-none d-md-block d-lg-none mt-2 pt-0 ml-0">
+                  <div class="px-5 mb-5" style="position:fixed; top:60px; z-index:100;">
+                     <div style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+
+                        <h1 class="h6 small col d-none d-md-block pt-0 pb-0" style="filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Education:&ensp;<strong>Master of Design Methods</strong></h1>
+                     </div>
+                  </div>
+               </div-->
+               <!-- LG Only 78px -->
+               <!--
+               <div class="row d-none d-lg-block d-xl-none text-center mt-2 pt-0 ml-0">
+                  <div class="px-5 mb-5" style="position:fixed; top:60px; z-index:100;">
+                     <div style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+
+                        <h1 class="h6 small col d-none d-md-block pt-1 pb-1" style="filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Education:&ensp;<strong>Master of Design Methods</strong></h1>
+                     </div>
+                  </div>
+               </div>
+               -->
+               <!-- XL Only 82px -->
+               <!--
+               <div class="row d-none d-xl-block text-center mt-2 pt-0 ml-5">
+                  <div class="mb-5" style="position:fixed; top:60px; z-index:100;">
+                     <div style="background-color: rgba(40, 40, 60, 0.90); color: rgba(255, 255, 255, .75); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+
+                        <h1 class="h6 small col d-none d-md-block pt-1 pb-1" style="filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Education:&ensp;<strong>Master of Design Methods</strong></h1>
+                     </div>
+                  </div>
+               </div>
+               -->
+               
+               <!-- ID MDM Degree -->
+                                       <!-- Tile 1: Show on XS and SM -->
+                        <div class="d-block d-md-none background-light1 jumbotron my-5 position-relative">
+                           <div class="container text-center mx-auto">
+                              <div class="row mx-1 mx-md-5 mt-n2">
+                                 <div class="col-12 col-md-5 mt-0 mb-2">
+                                    <h4 class="text-muted mt-4 pt-3 mb-0" style="font-size: 1.15em;"><i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Illinois Tech Institute of Design</h4>
+                                    <small class="mt-0" style="filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">Chicago, IL</small>
+                                    <img class="text-center mx-auto img-responsive mt-0 pt-2" src="images/EducationCard/IIT_ID_KI_night_2x.png" style="width:100%" alt="Illinois Tech Institute of Design Image">
+
+                                    <p class="text-center display-4 mt-4 mb-3 pb-2" style="font-size: calc(125% + 1vw + 1vh);">
+                                       Master of Design Methods 
+                                    </p>
+                                 </div>
+                                 <p class="lead text-left mx-4 mb-4 pb-2">
+                                    Founded by László Moholy-Nagy as The New Bauhaus in 1937, ID is known for pioneering human-centered and systems design. 
+                                 </p>
+
+                                 <a class="mx-auto d-block mt-4 mb-5" href="https://id.iit.edu/design/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Tile 1: Only show on MD and LG -->
+                        <div class="d-none d-md-block d-xl-none background-light1 jumbotron mx-5 px-5 my-5 position-relative"">
+                                                                  <h2 class="text-center mx-auto text-muted mb-3 pt-3 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Illinois Tech Institute of Design 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Chicago, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>Master of Design Methods</strong></h3>
+                           <table class="table-sm table-borderless mx-2 px-0 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive mt-0 pt-2" src="images/EducationCard/IIT_ID_KI_night_2x.png" style="width:100%;" alt="Illinois Tech Institute of Design Image">
+                                    </td>
+                                    <td>
+                                       <div class="ml-3">
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pt-2 pb-3">
+                                          Founded by László Moholy-Nagy as The New Bauhaus in 1937, ID is known for pioneering human-centered and systems design.  
+                                          </small>
+
+                                          <a class="mx-auto d-block mt-4 pt-2 mb-0" href="https://id.iit.edu/design/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- Tile 1: Only show on XL -->
+                        <div class="d-none d-xl-block background-light1 jumbotron mx-auto my-5 position-relative" style="width: calc((100%/1.618)">
+                           
+                                                                                             <h2 class="text-center mx-auto text-muted mb-3 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Illinois Tech Institute of Design 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Chicago, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>Master of Design Methods</strong></h3>
+                           
+                           <table class="table-sm table-borderless mx-5 px-5 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive mt-0 pt-2" src="images/EducationCard/IIT_ID_KI_night_2x.png" style="width:100%;" alt="Illinois Tech Institute of Design Image">
+                                    </td>
+                                    <td>
+                                       <div class="ml-3">
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pb-3">
+                                          Founded by László Moholy-Nagy as The New Bauhaus in 1937, ID is known for pioneering human-centered and systems design.  
+                                          </small>
+
+                                          <a class="mx-auto d-block stretched-link mt-4 pt-2 mb-0" href="https://id.iit.edu/design/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+
+               <!-- University of Phoenix Degree -->
+                                       <!-- Tile 1: Show on XS and SM -->
+                        <div class="d-block d-md-none background-light1 jumbotron my-5 position-relative">
+                           <div class="container text-center mx-auto">
+                              <div class="row mx-1 mx-md-5 mt-n2">
+                                 <div class="col-12 col-md-5 mt-0 mb-2">
+                                    <h4 class="text-muted mt-4 pt-0 mb-0" style="font-size: 1.15em;"><i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>University of Phoenix</h4>
+                                    <small class="mt-0" style="filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">Online & Schaumburg, IL</small>
+                                    <br>
+                                    <img class="text-center mx-auto img-responsive mt-4 pt-2" src="images/EducationCard/UOP-logo-footer-desktop_2x.png" style="width:100%; max-width: 9rem;" alt="University of Phoenix Image">
+
+                                    <p class="text-center display-4 mt-4 mb-3 pb-2" style="font-size: calc(125% + 1vw + 1vh);">
+                                       Bachelor of Science eBusiness with Honors 
+                                    </p>
+                                 </div>
+                                 <p class="lead text-left mx-4 mb-4 pb-2">
+                                    Specialized degree focusing on solutions to eBusiness opportunities and challenges. 
+                                 </p>
+
+                                 <a class="mx-auto d-block mt-4 mb-5" href="https://www.phoenix.edu/degrees/business/bs-b.html" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Tile 1: Only show on MD and LG -->
+                        <div class="d-none d-md-block d-xl-none background-light1 jumbotron mx-5 px-5 my-5 position-relative"">
+                                                                  <h2 class="text-center mx-auto text-muted mb-3 pt-0 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>University of Phoenix 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Online & Schaumburg, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-2" style="font-size: 2.5em"><strong>Bachelor of Science eBusiness with Honors</strong></h3>
+                           <table class="table-sm table-borderless mx-2 px-0 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+
+                                    <td>
+                                       <div>
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pt-2 pb-3">
+                                          Specialized degree focusing on solutions to eBusiness opportunities and challenges.   
+                                          </small>
+
+                                          <a class="mx-auto d-block mt-4 pt-2 mb-0" href="https://www.phoenix.edu/degrees/business/bs-b.html" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                                                        <td style="vertical-align: top;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive ml-3 pl-3 mt-0 pt-0" src="images/EducationCard/UOP-logo-footer-desktop_2x.png" style="width:100%;" alt="University of Phoenix Image">
+                                    </td>
+                                    
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- Tile 1: Only show on XL -->
+                        <div class="d-none d-xl-block background-light1 jumbotron mx-auto my-5 position-relative" style="width: calc((100%/1.618)">
+                           
+                                                                                             <h2 class="text-center mx-auto text-muted mb-3 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>University of Phoenix 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Online & Schaumburg, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-2" style="font-size: 2.5em"><strong>Bachelor of Science eBusiness with Honors</strong></h3>
+                           
+                           <table class="table-sm table-borderless mx-5 px-5 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+
+                                    <td>
+                                       <div>
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pb-3">
+                                          Specialized degree focusing on solutions to eBusiness opportunities and challenges.   
+                                          </small>
+
+                                          <a class="mx-auto d-block stretched-link mt-4 pt-2 mb-0" href="https://www.phoenix.edu/degrees/business/bs-b.html" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                   <td style="vertical-align: top;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive ml-3 pl-3 mt-0 pt-2" src="images/EducationCard/UOP-logo-footer-desktop_2x.png" style="width:100%;" alt="University of Phoenix Image">
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+               
+ 
+               <!-- Harper Degree -->
+                                       <!-- Tile 1: Show on XS and SM -->
+                        <div class="d-block d-md-none background-light1 jumbotron my-5 position-relative">
+                           <div class="container text-center mx-auto">
+                              <div class="row mx-1 mx-md-5 mt-n2">
+                                 <div class="col-12 col-md-5 mt-0 mb-2">
+                                    <h4 class="text-muted mt-4 pt-0 mb-0" style="font-size: 1.15em;"><i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Harper College</h4>
+                                    <small class="mt-0" style="filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">Palatine, IL</small>
+                                    <br>
+                                    <img class="text-center mx-auto img-responsive mt-3 pt-2" src="images/EducationCard/HarperCollege_2x.png" style="width:100%; max-width:17rem;" alt="Harper College Image">
+
+                                    <p class="text-center display-4 mt-4 mb-3 pb-2" style="font-size: calc(125% + 1vw + 1vh);">
+                                       Associate in Science with Honors 
+                                    </p>
+                                 </div>
+                                 <p class="lead text-left mx-4 mb-4 pb-2">
+                                    Harper College opened in September 1967 and is one of the nation’s premier community colleges. The college is named for Dr. William Rainey Harper a pioneer in the junior college movement and the first president of the University of Chicago. 
+                                 </p>
+
+                                 <a class="mx-auto d-block mt-4 mb-5" href="https://www.harpercollege.edu/catalog/current/programs/transfer/associate_in_science_710.php" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Tile 1: Only show on MD and LG -->
+                        <div class="d-none d-md-block d-xl-none background-light1 jumbotron mx-5 px-5 mb-5 position-relative"">
+                                                                  <h2 class="text-center mx-auto text-muted mb-3 pt-0 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Harper College 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Palatine, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>Associate in Science with Honors</strong></h3>
+                           <table class="table-sm table-borderless mx-2 px-0 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top; min-width: 10rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive mt-0 pt-2" src="images/EducationCard/HarperCollege_2x.png" style="width:100%;" alt="Harper College Image">
+                                    </td>
+                                    <td>
+                                       <div class="ml-3">
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pt-2 pb-3">
+                                                                              Harper College opened in September 1967 and is one of the nation’s premier community colleges. The college is named for Dr. William Rainey Harper a pioneer in the junior college movement and the first president of the University of Chicago. 
+                                          </small>
+
+                                          <a class="mx-auto d-block mt-4 pt-2 mb-0" href="https://www.harpercollege.edu/catalog/current/programs/transfer/associate_in_science_710.php" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- Tile 1: Only show on XL -->
+                        <div class="d-none d-xl-block background-light1 jumbotron mx-auto mb-5 position-relative" style="width: calc((100%/1.618)">
+                           
+                                                                                             <h2 class="text-center mx-auto text-muted mb-3 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Harper College 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Palatine, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>Associate in Science with Honors</strong></h3>
+                           
+                           <table class="table-sm table-borderless mx-5 px-5 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top; min-width: 11rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive mt-0 pt-2" src="images/EducationCard/HarperCollege_2x.png" style="width:100%;" alt="Harper College Image">
+                                    </td>
+                                    <td>
+                                       <div class="ml-3">
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pb-3">
+                                                                            Harper College opened in September 1967 and is one of the nation’s premier community colleges. The college is named for Dr. William Rainey Harper a pioneer in the junior college movement and the first president of the University of Chicago. 
+                                          </small>
+
+                                          <a class="mx-auto d-block stretched-link mt-4 pt-2 mb-0" href="https://www.harpercollege.edu/catalog/current/programs/transfer/associate_in_science_710.php" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+               
+               
+               <!-- R.E.T.S. Degree -->
+                                       <!-- Tile 1: Show on XS and SM -->
+                        <div class="d-block d-md-none background-light1 jumbotron my-5 position-relative">
+                           <div class="container text-center mx-auto">
+                              <div class="row mx-1 mx-md-5 mt-n2">
+                                 <div class="col-12 col-md-5 mt-0 mb-2">
+                                    <h4 class="text-muted mt-4 pt-0 mb-0" style="font-size: 1.15em;"><i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>R.E.T.S. Electronic School</h4>
+                                    <small class="mt-0" style="filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">Louisville, KY</small>
+                                    <br>
+                                    <img class="text-center mx-auto img-responsive mt-3 pt-2" src="images/EducationCard/rets-electronics_2x.png" style="width:100%; max-width: 9rem;" alt="RETS Image">
+
+                                    <p class="text-center display-4 mt-4 mb-3 pb-2" style="font-size: calc(125% + 1vw + 1vh);">
+                                       Associate in Electronic Engineering Technology with Honors 
+                                    </p>
+                                 </div>
+                                 <p class="lead text-left mx-4 mb-4 pb-2">
+                                    Technical school offering degree studies in digital and microprocessor electronics.  
+                                 </p>
+
+                                 <a class="mx-auto d-block mt-4 mb-5" href="https://www.degreesboard.com/campus_programs/kentucky/973-rets_electronic_institute.html" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Tile 1: Only show on MD and LG -->
+                        <div class="d-none d-md-block d-xl-none background-light1 jumbotron mx-5 px-5 mb-5 position-relative"">
+                                                                  <h2 class="text-center mx-auto text-muted mb-3 pt-0 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>R.E.T.S. Electronic School 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Louisville, KY</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>Associate in Electronic Engineering Technology with Honors</strong></h3>
+                           <table class="table-sm table-borderless mx-2 px-0 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+
+                                    <td>
+                                       <div>
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pt-2 pb-3">
+                                          Technical school offering degree studies in digital and microprocessor electronics.  
+                                          </small>
+
+                                          <a class="mx-auto d-block mt-4 pt-2 mb-0" href="https://www.degreesboard.com/campus_programs/kentucky/973-rets_electronic_institute.html" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                    
+                                    <td style="vertical-align: top; max-width: 13rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive ml-3 pl-2 mt-0 pt-2" src="images/EducationCard/rets-electronics_2x.png" style="width:100%;" alt="RETS Image">
+                                    </td>
+                                    
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- Tile 1: Only show on XL -->
+                        <div class="d-none d-xl-block background-light1 jumbotron mx-auto mb-5 position-relative" style="width: calc((100%/1.618)">
+                           
+                                                                                             <h2 class="text-center mx-auto text-muted mb-3 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-user-graduate my-2" style="margin-left: 4px; margin-right: 13px;"></i>R.E.T.S. Electronic School 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Louisville, KY</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>Associate in Electronic Engineering Technology with Honors</strong></h3>
+                           
+                           <table class="table-sm table-borderless mx-5 px-5 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+
+                                    <td>
+                                       <div">
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pb-3">
+                                          Technical school offering degree studies in digital and microprocessor electronics.  
+                                          </small>
+
+                                          <a class="mx-auto d-block stretched-link mt-4 pt-2 mb-0" href="https://www.degreesboard.com/campus_programs/kentucky/973-rets_electronic_institute.html" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                    
+                                    <td style="vertical-align: top; max-width: 15rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive ml-3 pl-2 mt-0 pt-2" src="images/EducationCard/rets-electronics_2x.png" style="width:100%;" alt="RETS Image">
+                                    </td>
+                                    
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+       
+            <!-- Section Padding -->
+       <div class="pt-2 pt-md-5 pb-md-4 pt-xl-5"></div>    
+
+               
+               <!-- NNG UX Management Certification -->
+                                       <!-- Tile 1: Show on XS and SM -->
+                        <div class="d-block d-md-none background-light1 jumbotron my-5 position-relative">
+                           <div class="container text-center mx-auto">
+                              <div class="row mx-1 mx-md-5 mt-n2">
+                                 <div class="col-12 col-md-5 mt-0 mb-2">
+                                    <h4 class="text-muted mt-4 pt-0 mb-0" style="font-size: 1.15em;"><i class="fas fa-certificate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Nielsen Norman Group</h4>
+                                    <small class="mt-0" style="filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">Chicago, IL</small>
+                                    <br>
+                                    <img class="text-center mx-auto img-responsive mt-3 pt-2" src="images/EducationCard/NNG-OmniHotel_2x.png" style="width:100%; max-width: 19rem;" alt="NNG UX Management Certificate Image">
+
+                                    <p class="text-center display-4 mt-4 mb-3 pb-2" style="font-size: calc(125% + 1vw + 1vh);">
+                                       UX Management Certificate 
+                                    </p>
+                                 </div>
+                                 <p class="lead text-left mx-4 mb-4 pb-2">
+                                    I learned principles and methods to integrate UX into both large and small organizations. I can apply known UX and management practices to effectively plan, communicate, negotiate, control, and measure UX work, people, and processes. 
+                                 </p>
+
+                                 <a class="mx-auto d-block mt-4 mb-5" href="https://www.nngroup.com/ux-certification/ux-management-specialty/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Tile 1: Only show on MD and LG -->
+                        <div class="d-none d-md-block d-xl-none background-light1 jumbotron mx-5 px-5 mb-5 position-relative"">
+                                                                  <h2 class="text-center mx-auto text-muted mb-3 pt-0 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-certificate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Nielsen Norman Group 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Chicago, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>UX Management Certificate</strong></h3>
+                           <table class="table-sm table-borderless mx-2 px-0 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top; min-width: 10rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive mt-0 pt-2" src="images/EducationCard/NNG-OmniHotel_2x.png" style="width:100%;" alt="NNG UX Management Certificate Image">
+                                    </td>
+                                    <td>
+                                       <div class="ml-3">
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pt-2 pb-3">
+                                    I learned principles and methods to integrate UX into both large and small organizations. I can apply known UX and management practices to effectively plan, communicate, negotiate, control, and measure UX work, people, and processes. 
+                                          </small>
+
+                                          <a class="mx-auto d-block mt-4 pt-2 mb-0" href="https://www.nngroup.com/ux-certification/ux-management-specialty/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- Tile 1: Only show on XL -->
+                        <div class="d-none d-xl-block background-light1 jumbotron mx-auto mb-5 position-relative" style="width: calc((100%/1.618)">
+                           
+                                                                                             <h2 class="text-center mx-auto text-muted mb-3 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-certificate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Nielsen Norman Group 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Chicago, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>UX Management Certificate</strong></h3>
+                           
+                           <table class="table-sm table-borderless mx-5 px-5 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top; min-width: 11rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive mt-0 pt-2" src="images/EducationCard/NNG-OmniHotel_2x.png" style="width:100%;" alt="NNG UX Management Certificate Image">
+                                    </td>
+                                    <td>
+                                       <div class="ml-3">
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pb-3">
+                                    I learned principles and methods to integrate UX into both large and small organizations. I can apply known UX and management practices to effectively plan, communicate, negotiate, control, and measure UX work, people, and processes. 
+                                          </small>
+
+                                          <a class="mx-auto d-block stretched-link mt-4 pt-2 mb-0" href="https://www.nngroup.com/ux-certification/ux-management-specialty/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+               
+                
+               <!-- NNG UX Certified with Interaction Design Speciality Certification -->
+                                       <!-- Tile 1: Show on XS and SM -->
+                        <div class="d-block d-md-none background-light1 jumbotron my-5 position-relative">
+                           <div class="container text-center mx-auto">
+                              <div class="row mx-1 mx-md-5 mt-n2">
+                                 <div class="col-12 col-md-5 mt-0 mb-2">
+                                    <h4 class="text-muted mt-4 pt-0 mb-0" style="font-size: 1.15em;"><i class="fas fa-certificate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Nielsen Norman Group</h4>
+                                    <small class="mt-0" style="filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">Chicago, IL</small>
+                                    <br>
+                                    <img class="text-center mx-auto img-responsive mt-3 pt-2" src="images/EducationCard/NNG-UX-Certified_2x.png" style="width:100%; max-width: 13rem;" alt="NNG UX Certificate Image">
+
+                                    <p class="text-center display-4 mt-4 mb-3 pb-2" style="font-size: calc(125% + 1vw + 1vh);">
+                                       UX Certificate with Interaction Design Speciality 
+                                    </p>
+                                 </div>
+                                 <p class="lead text-left mx-4 mb-4 pb-2">
+                                    Interaction design courses providing a broad coverage of tenets applicable to any design situation, including websites, mobile UX, complex and 
+                                    simple software applications, and consumer products. 
+                                 </p>
+
+                                 <a class="mx-auto d-block mt-4 mb-5" href="https://www.nngroup.com/ux-certification/interaction-design-specialty/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Tile 1: Only show on MD and LG -->
+                        <div class="d-none d-md-block d-xl-none background-light1 jumbotron mx-5 px-5 mb-5 position-relative"">
+                                                                  <h2 class="text-center mx-auto text-muted mb-3 pt-0 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-certificate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Nielsen Norman Group 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Chicago, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>UX Certificate with Interaction Design Speciality</strong></h3>
+                           <table class="table-sm table-borderless mx-2 px-0 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+
+                                    <td>
+                                       <div>
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pt-2 pb-3">
+                                          Interaction design courses providing a broad coverage of tenets applicable to any design situation, including websites, mobile UX, complex and 
+                                          simple software applications, and consumer products.  
+                                          </small>
+
+                                          <a class="mx-auto d-block mt-4 pt-2 mb-0" href="https://www.nngroup.com/ux-certification/interaction-design-specialty/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                    
+                                   <td style="vertical-align: top; min-width: 9rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive pl-4 mt-0 pt-2" src="images/EducationCard/NNG-UX-Certified_2x.png" style="width:100%;" alt="NNG UX Certificate Image">
+                                    </td>
+                                    
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <!-- Tile 1: Only show on XL -->
+                        <div class="d-none d-xl-block background-light1 jumbotron mx-auto mb-5 position-relative" style="width: calc((100%/1.618)">
+                           
+                                                                                             <h2 class="text-center mx-auto text-muted mb-3 pb-0" style="font-size: 1.15em">
+                                             <i class="fas fa-certificate my-2" style="margin-left: 4px; margin-right: 13px;"></i>Nielsen Norman Group 
+                                             <small class="mt-0 text-center mx-auto" style="font-size:.7em; filter: alpha(opacity=50); -moz-opacity: 0.50; -khtml-opacity: 0.50; -webkit-opacity: .50; opacity: 0.50;">&ensp;Chicago, IL</small>
+                                          </h2>
+                                                                  <h3 class="text-center mx-auto mt-n2 mb-3 pb-3" style="font-size: 2.5em"><strong>UX Certificate with Interaction Design Speciality</strong></h3>
+                           
+                           <table class="table-sm table-borderless mx-5 px-5 my-0 pb-5">
+                              <tbody>
+                                 <tr>
+
+                                    <td>
+                                       <div>
+
+                                          <small class="text-muted lead text-left mx-0 mb-1 pb-3">
+                                          Interaction design courses providing a broad coverage of tenets applicable to any design situation, including websites, mobile UX, complex and 
+                                          simple software applications, and consumer products.   
+                                          </small>
+
+                                          <a class="mx-auto d-block stretched-link mt-4 pt-2 mb-0" href="https://www.nngroup.com/ux-certification/interaction-design-specialty/" target="_blank">Visit Website<i class="align-middle fas fa-external-link-alt ml-2" style="font-size:.6em;"></i></a>
+                                       </div>
+                                    </td>
+                                    
+                                    <td style="vertical-align: top; min-width: 10rem;">
+                                       <!-- Row 1 -->
+                                         <img class="text-center mx-auto img-responsive pl-4 mt-0 pt-2" src="images/EducationCard/NNG-UX-Certified_2x.png" style="width:100%;" alt="NNG UX Certificate Image">
+                                    </td>
+                                    
+                                    
+                                    
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+               
+                   
+                   
+
+
+               <div class="row mb-3">
+                  <div class="mx-auto" style="height: 20px; color: rgba(255,255,255,.5); font-size: .75em;">Copyright © 2020 John Henry Krahenbuhl. All rights reserved.</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      
+            <footer class="clamped clamped--bottom clamped--fixed">
+<!-- Background color to minimize effects of Rubber Banding on iOS and Android Devices -->
+</footer>
+      <!-- Load JS last to improve perceived page load -->   
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--      <script src="js/portfolio.min.js"></script>  -->
+      <script src="js/portfolio.js"></script>
+   </body>
+</html>

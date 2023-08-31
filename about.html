@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>John Henry Krahenbuhl's Portfolio - About</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+      <link rel="manifest" href="images/site.webmanifest">
+      <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP%7CRoboto&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <!--load all styles -->
+      <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.min.css">
+      <style>
+         html {
+         overflow: hidden;
+         }
+         body {
+         min-width: 350px;
+         margin: 0;
+         background-color: rgba(77, 114, 176, 1);
+         /*          -webkit-opacity: 0;
+         opacity: 0; */
+         /* Test for Disable Bounce Scroll */
+         position: fixed;
+         overflow: hidden;
+         }
+         .right-content-scrollable-wrapper {
+         width: 100vw; 
+         height: 100vh;
+         /*        margin: 0px 0px 0px 0px;
+         padding: 0px 0px 0px 0px;  */
+         overflow-y: scroll;
+       /*  overflow-x: hidden; */
+         -webkit-overflow-scrolling: touch; /* enables “momentum” (smooth) scrolling */
+         }
+         /* Fix for Bootstrap Breakpoints */
+         /* 
+         Extra small devices (portrait phones, less than 576px) 
+         No media query since this is the default in Bootstrap because it is "mobile first"
+         */
+         @media (min-width: 0px) {  
+         #right-content-scrollable-pane {
+         /* margin-top: 60px; */
+         /* background-color: rgba(255,255,255,.01); */
+         padding-left: 0px;
+         padding-right: 0px;
+         margin-left: 0px;
+         width: 100%;
+         width: -webkit-calc(100%);
+         width: -moz-calc(100%);
+         width: calc(100%);
+         max-width:100%; 
+         }
+         } 
+         /* Small devices (landscape phones, 576px and up) */
+         @media (min-width: 576px) {  
+         }
+         /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+         @media (min-width: 768px) {  
+         #right-content-scrollable-pane {
+       /*  margin-top: 60px; */
+       /*  background-color: rgba(255,255,255,.15); */
+         padding-left: 0px;
+         padding-right: 0px;
+         margin-left: 70px;
+         width: 78%;
+         width: -webkit-calc(100% - 70px);
+         width: -moz-calc(100% - 70px);
+         width: calc(100% - 70px);       /* Updates */
+         /* width: calc(78% +15px); */
+         /* width: calc(100% - 6rem); */
+         max-width:100%; 
+         }
+         }
+         /* Large devices (desktops, 992px and up) */
+         @media (min-width: 992px) { 
+         #right-content-scrollable-pane {
+      /*   margin-top: 60px;  */
+      /*   background-color: rgba(255,255,255,.15); */
+         padding-left: 0px;
+         padding-right: 0px;
+      /* margin-left: 290px;
+         width: calc(78% +15px); */
+         margin-left: 290px;
+         width: 78%;
+         width: -webkit-calc(100% - 290px);
+         width: -moz-calc(100% - 290px);
+         width: calc(100% - 290px);  
+         max-width:100%; 
+         }
+         }
+         /* Extra large devices (large desktops, 1200px and up) */
+         @media (min-width: 1200px) {  
+         }
+         .navbar {
+         background-image: url("images/HeaderBackgroundImage.png");
+         width: 100vw;  /* was 100%  */
+         margin: 0px;
+         /* Center and scale the image nicely */
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         }
+         .fill{
+             overflow: hidden;
+    background-size: cover;
+    background-position: left top;
+    /* background-image: url('images/AboutMe/about_me_hero_x2-AI-x2.jpg'); */
+         }
+         .fill-xl{
+             overflow: hidden;
+    background-size: cover;
+    background-position: left top;
+    background-image: url('images/AboutMe/about_me_hero_x2-narrow-xl.png');  
+    /*  background-image: url('images/AboutMe/about_me_hero_x2-xl.png');  */
+         }
+         nav-scroller {
+         position: relative;
+         z-index: 2;
+         height: 2.75rem;
+         overflow-y: hidden;
+         }
+         .bg {
+         /* Full height */
+         /* height: calc(100vh - 60px); */
+         height: 100vh;
+         min-height: calc(100vh - 580px);
+         }
+         .row, .flex-row {
+         display: flex;
+         display: -webkit-flex; 
+         flex-wrap:wrap;
+         -webkit-flex-wrap: wrap;
+         }
+         .flex-row-center {
+         -webkit-justify-content: center;
+         justify-content: center;
+         }         
+         .flex-row-left {
+         -webkit-justify-content: left;
+         justify-content: left;
+         }
+         .row:before, .row:after
+         .flex-row:before, .flex-row:after,
+         .flex-row-left:before, .flex-row-left:after,
+         .flex-row-center:before, .flex-row-center:after
+         {
+         display: none;
+         }
+         hr {
+         border-color: rgba(255, 255, 255, .95);
+         }
+         h1, .fullName, .fullName-md {
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         /* text-shadow: 1px 2px 2px #4a4a4a; */
+         }
+         h2,
+         h3,
+         h4,
+         h5,
+         h6 {
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         /* text-shadow: 1px 2px 2px #4a4a4a; */
+         }
+         .jumbotron, 
+         .jumbotron-fluid {
+         background-color:transparent !important; 
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1.jumbotron, 
+         .background-light1.jumbotron-fluid {
+         background-color:rgba(40, 40, 60, 0.85) !important;
+         backdrop-filter: blur(5px);
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .95); 
+         -webkit-opacity: .95;
+         color: rgba(255, 255, 255, .95);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1-white-solid.jumbotron, 
+         .background-light1-white-solid.jumbotron-fluid {
+         background-color:rgba(255, 255, 255, 1.0) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1-antique-white-solid.jumbotron, 
+         .background-light1-antique-white-solid.jumbotron-fluid {
+         background-color:rgba(250, 250, 250, 1.0) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1-charcoal-solid.jumbotron, 
+         .background-light1-charcoal-solid.jumbotron-fluid {
+         background-color:rgba(66, 66, 66, 1.0) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1-PeriwinkleBlue-solid.jumbotron, 
+         .background-light1-PeriwinkleBlue-solid.jumbotron-fluid {
+         background-color:rgba(77, 114, 176, .65) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-PeriwinkleBlue-solid.jumbotron, 
+         .background-light1-PeriwinkleBlue-solid.jumbotron-fluid {
+         background-color:rgba(77, 114, 176, 1.0) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1-SkyBlue-solid.jumbotron, 
+         .background-light1-SkyBlue-solid.jumbotron-fluid {
+         background-color:rgba(172, 189, 217, .88) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1-santas-grey-solid.jumbotron, 
+         .background-light1-santas-grey-solid.jumbotron-fluid {
+         background-color:rgba(156, 156, 165, 1.0) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         .background-light1-very-dark-grayish-blue-solid.jumbotron, 
+         .background-light1-very-dark-grayish-blue-solid.jumbotron-fluid {
+         background-color:rgba(70, 81, 100, 1.0) !important;
+         /* backdrop-filter: blur(5px); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1.0); 
+         -webkit-opacity: 1.0;
+         color: rgba(255, 255, 255, 1.0);
+         text-shadow: 0px 1px 2px #4a4a4a;
+         }
+         /* CSS for Left Sidebar and Sidebar Link / Pseudo-classes */
+         /*
+         * Sidebar
+         */
+         .sidebar {
+         position: fixed;
+         top: 60px;
+         bottom: 0;
+         left: 0px; /* 16px */
+         min-height: 300px; 
+         padding: 0;
+         z-index: 100;
+         /* Behind the navbar */
+         box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+         }
+         /* Test for Thin Sidebar */
+         .miniSidebar {
+         position: fixed;
+         top: 60px; 
+         bottom: 0px;
+         left: 0px;  /* 10px */
+         padding: 0;
+         /* width: 53px; */
+         min-height: 300px;
+         z-index: 100;
+         /* Behind the navbar */
+         box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+         }
+         .sidebar-sticky {
+         position: -webkit-sticky;
+         position: sticky;
+         bottom: 0px;
+         /* Height of navbar */
+         height: calc(100vh - 60px);
+         padding-top: .5rem;
+         overflow-x: hidden;
+         overflow-y: auto;
+         /* Scrollable contents if viewport is shorter than content. */
+         }
+         .miniSidebar-sticky {
+         position: -webkit-sticky;
+         position: sticky;
+         top: 60px;
+         /* Height of navbar */
+         height: calc(100vh - 60px);
+         padding-top: 2.5rem;
+         overflow-x: hidden;
+         overflow-y: auto;
+         /* Scrollable contents if viewport is shorter than content. */
+         }
+         div.sidebar-sticky,
+         div.miniSidebar-sticky {
+         font-size: 1.25rem;
+         }
+         #about-img,
+         #about-img-xs,
+         #about-img-md,
+         #about-img-lg {
+         filter: alpha(opacity=65); 
+         -moz-opacity: 0.65; 
+         -khtml-opacity: 0.65; 
+         -webkit-opacity: .65; 
+         opacity: 0.65;
+         }
+         #sidebar {
+         /* width: 275px;  */
+         /* margin-bottom: 1.5em; */
+         background-color: rgba(89, 94, 114,.6);
+         }
+         #miniSidebar {
+         width: 80px;
+         /* margin-bottom: 1.5em; */
+         background-color: rgba(89, 94, 114,.6);
+         }
+         #mobileSidebar {
+         /* width: 275px;  */
+         /* margin-bottom: 1.5em; */
+         background-color: rgba(89, 94, 114,1);
+         }
+         #sidebar a,
+         #miniSidebar a,
+         #mobileSidebar a,
+         a.mobile.nav-link.menu-item {
+         -webkit-text-fill-color: rgba(196, 212, 235, 1); 
+         -webkit-opacity: 1; 
+         color: rgba(196, 212, 235, 1);
+         }
+         a {
+         -webkit-text-fill-color: rgba(196, 212, 235, 1); 
+         -webkit-opacity: 1;         
+         color: rgba(196, 212, 235,1);
+         }
+         #navbar-brand-headshotLockup:hover,
+         #navbar-brand-headshotLockup-md:hover,
+         #navbar-brand-mail a:hover,
+         #navbar-brand-linkedin a:hover
+         {
+         -webkit-opacity: .6;
+         opacity: .6;
+         }
+         a:hover
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1; 
+         color: rgb(255, 255, 255);
+         opacity: 1.0;
+         }
+         #sidebar a:hover,
+         #miniSidebar a:hover,
+         #mobileSidebar a:hover,
+         li.nav-item a:hover,
+         li.nav-item.mt-3 a:hover,
+         #sidebar a:hover > #about-img,
+         #miniSidebar a:hover > #about-img,
+         #mobileSidebar a:hover > #about-img,
+         li.nav-item a:hover > #about-img,
+         li.nav-item.mt-3 a:hover > #about-img,
+         #sidebar a:hover > #about-img-xs,
+         #miniSidebar a:hover > #about-img-xs,
+         #mobileSidebar a:hover > #about-img-xs,
+         li.nav-item a:hover > #about-img-xs,
+         li.nav-item.mt-3 a:hover > #about-img-xs,
+         #sidebar a:hover > #about-img-md,
+         #miniSidebar a:hover > #about-img-md,
+         #mobileSidebar a:hover > #about-img-md,
+         li.nav-item a:hover > #about-img-md,
+         li.nav-item.mt-3 a:hover > #about-img-md,
+         #sidebar a:hover > #about-img-lg,
+         #miniSidebar a:hover > #about-img-lg,
+         #mobileSidebar a:hover > #about-img-lg,
+         li.nav-item a:hover > #about-img-lg,
+         li.nav-item.mt-3 a:hover > #about-img-lg
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1;
+         opacity: 1.0;
+         color: rgba(255, 255, 255, 1);
+         }
+         #about-link.active
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1) !important;
+         -webkit-opacity: 1 !important;
+         color: rgba(255, 255, 255, 1) !important;
+         opacity: 1 !important;
+         }
+         #about-link.active > #about-img,
+         #about-link.active > #about-img-xs,
+         #about-link.active > #about-img-md,
+         #about-link.active > #about-img-lg
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1;
+         color: rgba(255, 255, 255, 1);
+         opacity: 1;
+         }
+         #sidebar a.nav-link.active,
+         #miniSidebar a.nav-link.active,
+         #mobileSidebar a.nav-link.active {
+         -webkit-text-fill-color: rgba(255, 255, 255, .98); 
+         -webkit-opacity: .98;
+         color: rgba(255, 255, 255, .98);
+         opacity: .98;
+         }
+         #about-link.active
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1;
+         color: rgba(255, 255, 255, 1);
+         opacity: 1;
+         }
+         #about-link.active > #about-img,
+         #about-link.active > #about-img-xs,
+         #about-link.active > #about-img-md,
+         #about-link.active > #about-img-lg
+         {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1;
+         color: rgba(255, 255, 255, 1);
+         opacity: 1;
+         }
+         .nav > .nav-link.active {
+         -webkit-text-fill-color: rgba(255, 255, 255, .90); 
+         -webkit-opacity: .90;
+         color: rgba(255, 255, 255, .90);
+         }
+         #about-img:hover,
+         #about-img-xs:hover,
+         #about-img-md:hover,
+         #about-img-lg:hover {
+         background-color:transparent;
+         }
+         div a img:hover {
+         -webkit-text-fill-color: rgba(0,0,0, 1.0); 
+         -webkit-opacity: 1.0;
+         opacity: 1.0;
+         background-color: rgba(0, 0, 0, 1.0);
+         }
+         li.nav-item a > span.fa-stack > i.far.fa-check-circle {
+         -webkit-text-fill-color: 	rgba(92, 184, 92, 1); 
+         -webkit-opacity: 1;
+         color: rgba(92, 184, 92, 1);
+         opacity: 1;
+         } 
+         .fa,
+         .mainHeader,
+         i.fas.fa-bars {
+         -webkit-text-fill-color: rgba(255, 255, 255, .85); 
+         -webkit-opacity: .85;
+         color: rgba(255, 255, 255, .85);
+         }
+         .mainCTA,
+         .secondaryCTA {
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1;
+         color: rgba(255, 255, 255, 1);
+         }
+         /* For xs, sm screen size: Location optimized and best at this time use x4 for final build */
+         a[class*="xs-sm-Testx4"] {
+         display: inline-block;
+         height: 44px;
+         background: url("images/jk-headshot-x4.png") no-repeat;
+         margin-left: 8px;
+         /* background-position-x: 48px; */
+         background-position-y: center;
+         background-size: 44px 44px;
+         /* padding-left:59px; */
+         text-decoration: none;
+         font-size: 12px;
+         font-family: 'Roboto', sans-serif;
+         line-height: 12px;
+         padding-top: 6px;
+         }
+         a[class*="xs-sm-Testx4"]>span {
+         margin-left: 0px;
+         padding-left: 6px;
+         }
+         a[class*="xs-sm-Testx4"]>span>h1,
+         a[class*="xs-sm-Testx4"]>span>.fullName,
+         a[class*="xs-sm-Testx4"]>span>.fullName-md  {
+         font-size: 20px;
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         line-height: 20px;
+         padding-left: 0px;
+         }
+         /* End: For xs, sm screen size: Location optimized and best at this time x4 for final build */
+         /* For md screen size and above: Location optimized and best at this time use x4 for final build */
+         a[class*="Testx4lg"] {
+         display: inline-block;
+         height: 44px;
+         /* background: url("images/jk-headshot-x4.png") no-repeat left center;
+         background-size: 44px 44px;
+         padding-left: 59px; */
+         padding-left: 16px;
+         text-decoration: none;
+         font-size: 12px;
+         font-family: 'Roboto', sans-serif;
+         line-height: 12px;
+         padding-top: 6px;
+         }
+         a[class*="Testx4lg"]>span {
+         margin-left: -5px;
+         }
+         a[class*="Testx4lg"]>span>h1,
+         a[class*="Testx4lg"]>span>.fullName,
+         a[class*="Testx4lg"]>span>.fullName-md {
+         font-size: 20px;
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         line-height: 20px;
+         margin-left: -11px;
+         }
+         /* End: For md screen size and above: Location optimized and best at this time x4 for final build */
+         /* Set top of Responsive Background image as Header Background */
+         div.header {
+         background-image: url("images/home_background_high.png");
+         /* background-image: url("Patent.png"); */
+         /* corrects small inline gap at bottom of containing div */
+         display: block;
+         width: 100%;
+         /* corrects obscure Firefox bug */
+         max-width: 100%;
+         /* just in case, to force correct aspect ratio */
+         height: auto !important;
+         display: block;
+         /* corrects small inline gap at bottom of containing div */
+         width: 100%; /* corrects obscure Firefox bug */
+         max-width: 100%;
+         /* just in case, to force correct aspect ratio */
+         height: auto !important;
+         /*width: auto\9; 
+         /* ie8+9 - use modernizr instead of this \9 hack */
+         /* lt ie8 */
+         -ms-interpolation-mode: bicubic;
+         /* optionally force a minimum size if img src size is known: */
+         /* min-height: 320px; /* max-height of .crop-height */
+         /* min-width: 480px; /* proportional to above */
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-attachment: fixed;
+         padding: 0px;
+         max-height: 60px;
+         /*	overflow: hidden; */
+         }
+         main {
+         top: 60px;
+         }
+         .nav-pills, 
+         a#pills-case-study-tab.nav-link,
+         a#pills-resume-tab.nav-link,
+         a#pills-education-tab.nav-link {
+         /* background-color: rgba(77, 114, 176, .5); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .65); 
+         -webkit-opacity: .65;
+         color: rgba(255, 255, 255, .65);
+         opacity: .65;
+         }
+         a#pills-case-study-tab.nav-link:hover,
+         a#pills-resume-tab.nav-link:hover,
+         a#pills-education-tab.nav-link:hover {
+         /* background-color: rgba(77, 114, 176, .5); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, .9); 
+         -webkit-opacity: .9;
+         color: rgba(255, 255, 255, .9);
+         opacity: .9;
+         /* background-color: rgba(77, 114, 176, .9); */ /* Blue */
+         /* background-color: rgba(93, 75, 66, .8); */ /* Brown */
+         }         
+         a#pills-case-study-tab.nav-link.active,
+         a#pills-resume-tab.nav-link.active,
+         a#pills-education-tab.nav-link.active {
+         /* background-color: rgba(77, 114, 176, .5); */
+         font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+         -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+         -webkit-opacity: 1;
+         color: rgba(255, 255, 255, 1);
+         opacity: 1;
+         background-color:transparent;
+         /*        background-color:rgba(40, 40, 60, 0.85); */ /* Dark Purple */
+         /* background-color: rgba(77, 114, 176, .6); */   /*   Blue */
+         /* background-color: rgba(93, 75, 66, .9); */ /* Brown */
+         border-bottom: 5px solid rgba(40, 40, 60, 0.6);
+         bottom: -5px;
+         content: " ";
+         left: 0;
+         right: 0;
+         }
+         .footer {
+         /*  position: fixed; */
+         left: 0;
+         bottom: 0px;
+         width: 100%;
+         /*  height: 20px; */
+         -webkit-text-fill-color: rgba(255, 255, 255, .50); 
+         -webkit-opacity: .50;
+         color: rgba(255, 255, 255, .5);
+         text-align: center;
+         /*   padding-top: 57px; */
+         }
+         .footer-text {
+         font-size: .3em
+         }
+         .custom-control-input:focus ~ .custom-control-label::before {
+         box-shadow:none !important;
+         }
+         .custom-control-input:checked~.custom-control-label::before {
+         color: #fff;
+         border-color: rgb(40, 40, 60);
+         background-color: rgba(40, 40, 60, 0.50);
+         }
+         /* Small devices (landscape phones, less than 768px) */
+         @media screen and (max-width: 767px) {
+         .lg-top-navbar {
+         display: none;
+         }
+         }
+         /* Medium devices (tablets, 768px and up) */
+         @media screen and (min-width: 768px) {
+         .lg-top-navbar {
+         display: flex;
+         }
+         }
+         /* iPad in portrait & landscape (All generations - including iPad mini) */
+         /*
+         @media only screen 
+         and (min-device-width : 768px) 
+         and (max-device-width : 1024px)  
+         { 
+         }
+         */
+         /* iPad in landscape */
+         @media only screen 
+         and (min-device-width : 768px) 
+         and (max-device-width : 1024px) 
+         and (orientation : landscape) 
+         { 
+         #switchLabelSpacer {
+         margin-right: 1rem;
+         }
+         #bottom-padding-tablet-mobile {
+         padding-top: 3rem!important;
+         }
+         }
+         /* iPad in portrait */
+         @media only screen 
+         and (min-device-width : 768px) 
+         and (max-device-width : 1024px) 
+         and (orientation : portrait) 
+         { 
+         #switchLabelSpacer {
+         margin-right: 1rem;
+         }
+         #bottom-padding-tablet-mobile {
+         padding-top: 3rem!important;
+         }
+         }
+         /* OnePlus in portrait */
+         @media only screen 
+         and (device-width : 412px) 
+         and (orientation : portrait) 
+         { 
+         #switchLabelSpacer {
+         margin-right: .65rem;
+         }
+         #bottom-padding-tablet-mobile {
+         padding-top: 3rem!important;
+         }
+         }
+         /* setup Background Image in Footer to be Clamped to bottom of view port for
+         iOS and Android devices */
+         /*         footer::before {
+         content: "";
+         display: block;
+         position: fixed;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -10;
+         background: url("images/home_background_high.png") no-repeat center center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         } */
+         /* clamping styles
+         ------------------------------------------- */
+         .clamped {
+         background-color: rgba(77, 114, 176, 1);
+         /*      z-index: -11;  */
+         content: "";
+         display: block;
+         position: fixed;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -10;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         /*    border: 3px dashed blue;
+         color:#fff; */
+         }
+         /* Small Screens All */
+         @media only screen 
+         and (max-width : 1024px)
+         { 
+         .clamped {
+         background: url("images/home_background_1024.png") no-repeat center center;
+         width: 100%;
+         min-height: 100%;
+         overflow: hidden;
+         overscroll-behavior: none;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         }
+         }
+         /* Large Screens */
+         @media only screen 
+         and (min-width : 1024px) 
+         { 
+         .clamped {
+         background: url("images/home_background_high.png") no-repeat center center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         }
+         }
+         /* iPad in landscape */
+         @media only screen 
+         and (min-device-width : 768px) 
+         and (max-device-width : 1024px) 
+         and (orientation : landscape) 
+         { 
+         .clamped {
+         background: url("images/Landscape.png") no-repeat center center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         }
+         }
+         /* iPad in portrait */
+         @media only screen 
+         and (min-device-width : 768px) 
+         and (max-device-width : 1024px) 
+         and (orientation : portrait) 
+         { 
+         .clamped {
+         background: url("images/Portrait.png") no-repeat center center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         }
+         }
+         .clamped--top {
+         top: 0;
+         }
+         .clamped--bottom {
+         bottom: 0;
+         }
+         .clamped--fixed {
+         position: fixed
+         }       
+      </style>
+   </head>
+   <body class="bg">
+      <div class="header fixed-top">
+         <!--  Visibile xs, sm only  -->
+         <nav class="d-md-none navbar navbar-expand-sm navbar-dark justify-content-start" style="min-width: 400px;">
+            <!-- Brand -->
+            <ul class="d-inline-block nav navbar-nav flex-row" style="margin-left: -4px;">
+               <!--         <li class="nav-item"><a class="nav-link d-none d-md-block" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank"><i class="fas fa-envelope" style="font-size: 1.5em; margin-left: 1.5em;"></i></a> </li>
+                  -->
+               <!-- Toggler/collapsibe List Item with Dropdown-->
+               <!-- was just div prior to W3C check. Test for change to li -->
+               <li class="bs-example mr-2">
+                  <!-- Toggler/collapsibe List Item -->
+                  <div class="dropdown mt-2">
+                     <a href="#" class="nav-item" data-toggle="collapse" data-target="#mobileSidebar"><i class="fas fa-bars pb-2" style="font-size: 1.5em;"></i></a>
+                     <!-- Dropdown Navbar links -->
+                     <!-- Only visible on sm, lg: smaller devices by using visible-xs, visible-sm, etc... -->
+                  </div>
+               </li>
+            </ul>
+            <a class="xs-sm-Testx4 navbar-brand align-middle" id="navbar-brand-headshotLockup" href="home.html">
+               <span>
+                  Innovation + Expertise = Results
+                  <div class="fullName">John Henry Krahenbuhl</div>
+               </span>
+            </a>
+         </nav>
+         <!--  Visibile md and larger  -->
+         <nav class="lg-top-navbar navbar row navbar-dark">
+            <!-- Brand -->
+            <a class="Testx4lg navbar-brand" id="navbar-brand-headshotLockup-md" href="home.html">
+               <span>
+                  Innovation + Expertise = Results
+                  <div class="fullName-md">John Henry Krahenbuhl</div>
+               </span>
+            </a>
+            <ul class="nav navbar-nav row flex-row justify-content-md-center justify-content-start flex-nowrap ml-auto">
+               <li class="nav-item" id="navbar-brand-mail"><a class="nav-link" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank"><i class="mainHeader fas fa-envelope  .d-none" style="font-size: 1.5em; margin-right: 24px;"></i></a> </li>
+               <li class="nav-item ml-3" id="navbar-brand-linkedin"><a class="nav-link" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank"><i class="mainHeader fab fa-linkedin" style="font-size: 1.5em; margin-right: 48px;"></i></a> </li>
+            </ul>
+         </nav>
+      </div>
+      <!-- Start - Left Nav From Bootstrap Example -->
+      <div class="container-fluid px-0">
+         <section style="display: table;">
+         <header style="display: table-row;">
+            <div class="px-0 py-0" style="display: table-cell;">
+               <!-- TD 1 from Table -->
+               <!-- Fixed Hamburger and Left Rail Nav -->
+               <div class="h-100">
+                  <!--  Main Page Content goes here -->
+                  <!-- Dropdown Navbar links -->
+                  <!-- Only visible on sm, lg: smaller devices by using visible-xs, visible-sm, etc... -->
+                  <!-- Hamburger / Mobile Nav menu viewports  -->
+                  <nav class="col-12 collapse d-md-none sidebar" id="mobileSidebar" style="z-index: 9998;">
+                     <div class="sidebar-sticky">
+                        <ul class="nav flex-column font-weight-bold" id="sidebar-ul-mobile">
+                           <li class="nav-item mt-3">
+                              <a class="nav-link menu-item" href="experience.html" data-index="0">
+                              <i class="fas fa-handshake" style="margin-left: -1px; margin-right: 16px;"></i>Experience <span class="sr-only">(current)</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link menu-item" href="patents.html" data-index="1">
+                              <i class="fas fa-lightbulb" style="margin-left: 4px; margin-right: 22.5px;"></i>Patents
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link menu-item" href="publications.html" data-index="2">
+                              <i class="fas fa-book-open" style="margin-left: -1px; margin-right: 19px;"></i>Publications
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link menu-item active" id="about-link" href="about.html" data-index="3">
+                              <img class="text-center d-inline-flex align-self-center img-responsive" id="about-img" src="images/android-chrome-192x192.png" style="margin-top: 0.075em; margin-left: 1px; margin-right: 18px; width:1.15em;" alt="John Henry Krahenbuhl Logo"><span style="margin-left: 0px;">About</span>
+                              </a>
+                           </li>
+                           <li class="nav-item mt-3">
+                              <a class="mobile nav-link menu-item" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank">
+                              <i class="fas fa-envelope" style="margin-left: 2.5px; margin-right: 16px;"></i>Send Email
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="mobile nav-link menu-item" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank">
+                              <i class="fab fa-linkedin" style="margin-left: 4px; margin-right: 16px;"></i>View LinkedIn
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+                  <!-- Hamburger Nav menu for Xs, Sm viewports  -->
+                  <nav class="col-2 collapse d-md-none sidebar" id="sidebar" style="z-index: 9998;">
+                     <div class="sidebar-sticky">
+                        <ul class="nav flex-column font-weight-bold" id="sidebar-ul-xs">
+                           <li class="nav-item mt-3">
+                              <a class="nav-link menu-item" href="experience.html" data-index="0">
+                              <i class="fas fa-handshake" style="margin-left: -1px; margin-right: 7px;"></i> Experience <span class="sr-only">(current)</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link menu-item" href="patents.html" data-index="1">
+                              <i class="fas fa-lightbulb" style="margin-left: 4px; margin-right: 14px;"></i> Patents
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link menu-item" href="publications.html" data-index="2">
+                              <i class="fas fa-book-open" style="margin-left: 2px; margin-right: 8px;"></i> Publications
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link menu-item active" id="about-link" href="about.html" data-index="3">
+                              <img class="text-center d-inline-flex align-self-center mr-2 img-responsive" id="about-img-xs" src="images/android-chrome-192x192.png" style="margin-top: 0.075em; margin-left: 0px; margin-right: 18px; width:1.15em;" alt="John Henry Krahenbuhl Logo"><span style="margin-left: 8px;">About</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+                  <!-- Only visible on sm, lg: smaller devices by using visible-xs, visible-sm, etc... -->
+                  <!-- Shown on MD only -->
+                  <nav class="d-none d-md-block d-lg-none miniSidebar" id="miniSidebar" style="width: 70px;>
+                     <div class="miniSidebar-sticky sticky-top">
+                     <ul class="nav flex-column align-items-center font-weight-bold" id="sidebar-ul-mini" style="font-size: 1.15em">
+                        <li class="nav-item mt-5 pt-2">
+                           <a class="nav-link menu-item  mx-auto text-center" href="experience.html"  data-index="0" style=" margin-top: -30px;">
+                           <i class="fas fa-handshake"></i>
+                           <span class="sr-only">(current)</span>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-1 pt-2">
+                           <a class="nav-link menu-item mx-auto text-center" href="patents.html"  data-index="1">
+                           <i class="fas fa-lightbulb"></i>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-2 pt-1">
+                           <a class="nav-link menu-item mx-auto text-center" href="publications.html" data-index="2">
+                           <i class="fas fa-book-open"></i>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                           <a class="nav-link  menu-item mx-auto text-center active" id="about-link" href="about.html" data-index="3">
+                           <img class="text-center img-responsive" id="about-img-md" src="images/android-chrome-192x192.png" style="width:1.15em;" alt="John Henry Krahenbuhl Logo">
+                           </a>
+                        </li>
+                        <!--                           
+                           <span class="my-3 w-100"></span>
+                           <li class="nav-item mt-4 text-center">
+                               <a class="nav-link" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank">
+                                   <i class="fas fa-envelope"></i>
+                               </a>
+                           </li>
+                           <li class="nav-item mt-4 text-center">
+                               <a class="nav-link" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank">
+                                   <i class="fab fa-linkedin"></i>
+                               </a>
+                           </li>
+                           -->                          
+                     </ul>
+               </div>
+               </nav>
+               <!-- Nav Menu for Lg and Xl viewports -->
+               <nav class="d-none d-lg-block sidebar" id="sidebar" style="width: 290px;">
+                  <div class="sidebar-sticky">
+                     <ul class="nav flex-column font-weight-bold" id="sidebar-ul-lg">
+                        <li class="nav-item mt-3">
+                           <a class="nav-link menu-item" href="experience.html"  data-index="0">
+                           <i class="fas fa-handshake" style="margin-left: 10px; margin-right: 14px;"></i> Experience <span class="sr-only">(current)</span>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="patents.html" data-index="1">
+                           <i class="fas fa-lightbulb" style="margin-left: 15px; margin-right: 20px;"></i> Patents
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item" href="publications.html" data-index="2">
+                           <i class="fas fa-book-open" style="margin-left: 11px; margin-right: 15px;"></i> Publications
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link menu-item active" id="about-link" href="about.html" data-index="3">
+                           <img class="text-center mt-n1 mr-2 img-responsive" id="about-img-lg" src="images/android-chrome-192x192.png" style="margin-left: 13px; margin-right: 10px; width:1.15em;" alt="John Henry Krahenbuhl Logo"><span style="margin-left: 9px;">About</span>
+                           </a>
+                        </li>
+                     </ul>
+                     <!-- Example Section Heading 
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                          <span>Saved reports</span>
+                          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                          </a>
+                        </h6>
+                        -->
+                  </div>
+               </nav>
+               <!--  End Main Page Content goes here -->
+            </div>
+      </div>
+      <div class="px-0 py-0" style="display: table-cell;">      
+          
+      <!-- Fixed Page Title and Wayfinding Cue -->
+
+               <!-- XS Only -->
+               <!--
+               <div class="row col d-block d-sm-none text-center ml-5 pl-1">
+                  <div class="mb-5" style="position:fixed; top:60px; margin-left: 10px; z-index:100;">
+                     <div class="col-12" style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+                        <h1 class="h6 small col d-block d-sm-none pt-1 pb-1" style="min-width: 250px; filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-lightbulb" style="margin-left: 0px; margin-right: 18px;"></i>Patents</h1>
+                     </div>
+                  </div>
+               </div>
+               -->
+               <!-- SM Only -->
+               <!--
+               <div class="row d-none d-sm-block d-md-none text-center ml-5 pl-1">
+                  <div class="mb-5" style="position:fixed; top:60px; margin-left: 10px; z-index:100;">
+                     <div style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+                        <h1 class="h6 small col d-none d-sm-block d-md-none pt-1 pb-1" style="min-width: 280px; filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-lightbulb" style="margin-left: 0px; margin-right: 18px;"></i>Patents</h1>
+                     </div>
+                  </div>
+               </div>
+               -->
+               <!-- MD Only 70px -->
+               <!--
+               <div class="row d-none d-md-block d-lg-none mt-2 pt-0 ml-0"">
+                  <div class="mb-5" style="position:fixed; top:60px; margin-left: 85px; z-index:100;">
+                     <div style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-radius: 5px;">
+                        <h1 class="h6 small col d-none d-md-block pt-1 pb-1" style="filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-lightbulb my-2" style="margin-left: 4px; margin-right: 13px;"></i>Patents</h1>
+                     </div>
+                  </div>
+               </div>
+               -->
+               <!-- LG Only 78px -->
+               <!--
+               <div class="row d-none d-lg-block d-xl-none text-center mt-2 pt-0 ml-0">
+                  <div class="mb-5" style="position:fixed; top:60px; margin-left: 305px; z-index:100;">
+                     <div style="background-color: rgba(40, 40, 60, 0.9); color: rgba(255, 255, 255, .75); border-radius: 5px;">
+                        <h1 class="h6 small col d-none d-md-block pt-1 pb-1" style="filter: alpha(opacity=80); -moz-opacity: 0.80; -khtml-opacity: 0.80; -webkit-opacity: .80; opacity: 0.80;"><i class="fas fa-lightbulb my-2" style="margin-left: 4px; margin-right: 13px;"></i>Patents</h1>
+                     </div>
+                  </div>
+               </div>
+               -->
+
+      <!-- TD 2 from Table -->
+      <!-- To be shown when Experience Page loads -->
+      <div class="right-content-scrollable-wrapper">
+      <!-- Setup for the Main Section -->
+      <!-- main section default back ground color was - background-color: rgba(255,255,255,.14); Dark brown Test background-color: rgba(37,22,18,.14);" Green background-color: rgba(48,53,34,.14);"-->
+      <!--           <div class="offset-md-1 col-md-11 offset-lg-3 col-lg-9 offset-xl-2 col-xl-10 mt-5 text-left text-white" style="margin-top: 75px; background-color: rgba(255,255,255,.15);">  -->
+      <div id="right-content-scrollable-pane" class="text-right text-white">
+      <!-- End New Stacked Icon - Original version -->
+      <div class="background-light1 jumbotron jumbotron-fluid mt-0 mb-0">
+      
+
+ <!-- 1st section-->
+    <section>
+    
+            <!-- Show on XS - 1st Selection-->
+  <div class="d-block d-sm-none fluid-container mt-3">
+    <div class="row no-gutters">
+      <div class="col-12 mt-5 mb-n2">
+        <div class="menu-text flex-grow-1 px-5">
+          <h2 class="main-title text-left pb-2" style="font-size: calc(150% + 1vw + 1vh); font-weight: 700;">Hello, I'm John!</h2>
+                  <div class="menu-image w-100 d-flex align-items-start pt-4 pb-2">
+          <img src="images/AboutMe/about_me_hero_x2.png" class="img-fluid" alt="John Krahenbuhl Hero image">
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+        <div class="row no-gutters mb-5">
+      <div class="mt-3">
+        <div class="menu-text flex-grow-1 py-2 px-5">
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left font-weight-bold mt-2 pr-5">
+               <br>I am a Director of User Experience and Sr. Solutions Architect at Epsilon a subsidiary of Publicis Groupe. I have 12 granted utility patents and am the author of 3 books on digital prototyping.
+               <br>
+               <br>
+               With over a decade innovating in technology as well as working with heterogeneous client and server configurations 
+               (Unix / Linux, Windows, Mac OS, iOS,  and Android), I've performed in various technology roles across 
+               multiple verticals spanning Telecommunications, Manufacturing, Consumer Package Goods, and Data Services. 
+               I have built numerous physical and digital prototypes to refine UI/UX and System innovations, communicate future concepts and empower users.<br>
+                <br>I also have a Masters Degree in Design Methods from The New Bauhaus at Illinois Tech Institute of Design.</p>
+          </div>
+        </div>
+      </div>     
+    </div>
+  </div>  
+ 
+ 
+     <!-- Show on SM - 1st Selection-->
+  <div class="d-none d-sm-block d-md-none fluid-container mt-n3">
+    <div class="row no-gutters">
+      <div class="col-md-12 mt-5 mb-n2">
+        <div class="menu-text flex-grow-1 px-5">
+          <h2 class="main-title text-left" style="font-size: calc(130% + 1vw + 1vh); font-weight: 700;">Hello, I'm John!</h2>
+          
+      <div>
+        <div class="menu-image h-100 d-flex align-items-start mt-5 mb-1">
+          <img src="images/AboutMe/about_me_hero_x2.png" class="img-fluid" alt="menu image">
+        </div>
+      </div>	   
+          
+        </div>
+      </div>
+
+<!--
+      <div class="fill row w-50 no-gutters">
+            <div class="col-md-6 my-auto">
+            <div class="fill h-100">
+
+        </div>
+      </div>	
+      </div>
+-->   
+
+      
+      
+    </div>
+        <div class="row no-gutters mb-5 pb-3">
+      <div class="col-md-12 mt-3">
+        <div class="menu-text flex-grow-1 py-2 px-5">
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left font-weight-bold mt-2 pr-5">
+               <br>I am a Director of User Experience and Sr. Solutions Architect at Epsilon a subsidiary of Publicis Groupe. I have 12 granted utility patents and am the author of 3 books on digital prototyping.
+               <br>
+               <br>
+               With over a decade innovating in technology as well as working with heterogeneous client and server configurations 
+               (Unix / Linux, Windows, Mac OS, iOS,  and Android), I've performed in various technology roles across 
+               multiple verticals spanning Telecommunications, Manufacturing, Consumer Package Goods, and Data Services. 
+               I have built numerous physical and digital prototypes to refine UI/UX and System innovations, communicate future concepts and empower users.<br>
+                <br>I also have a Masters Degree in Design Methods from The New Bauhaus at Illinois Tech Institute of Design.</p>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </div>
+  </div>   
+    <!-- Show on MD & LG - 1st Selection-->
+  <div class="d-none d-md-block d-xl-none fluid-container mt-n3">
+    <div class="row no-gutters">
+      <div class="col-md-12 mt-5 mb-n2">
+        <div class="menu-text flex-grow-1 px-5">
+          <h2 class="main-title text-left" style="font-size: calc(125% + 1vw + 1vh); font-weight: 700;">Hello, I'm John!</h2>
+          
+      <div>
+        <div class="menu-image h-100 d-flex align-items-start mt-5 mb-2">
+          <img src="images/AboutMe/about_me_hero_x2.png" class="img-fluid" alt="menu image">
+        </div>
+      </div>	   
+          
+        </div>
+      </div>
+
+<!--
+      <div class="fill row w-50 no-gutters">
+            <div class="col-md-6 my-auto">
+            <div class="fill h-100">
+
+        </div>
+      </div>	
+      </div>
+-->   
+
+      
+      
+    </div>
+        <div class="row no-gutters mb-5">
+      <div class="col-md-12 mt-3">
+        <div class="menu-text flex-grow-1 py-2 px-5">
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left font-weight-bold mt-2 pr-5">
+               <br>I am a Director of User Experience and Sr. Solutions Architect at Epsilon a subsidiary of Publicis Groupe. I have 12 granted utility patents and am the author of 3 books on digital prototyping.
+               <br>
+               <br>
+               With over a decade innovating in technology as well as working with heterogeneous client and server configurations 
+               (Unix / Linux, Windows, Mac OS, iOS,  and Android), I've performed in various technology roles across 
+               multiple verticals spanning Telecommunications, Manufacturing, Consumer Package Goods, and Data Services. 
+               I have built numerous physical and digital prototypes to refine UI/UX and System innovations, communicate future concepts and empower users.<br>
+                <br>I also have a Masters Degree in Design Methods from The New Bauhaus at Illinois Tech Institute of Design.</p>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </div>
+  </div>    
+    <!-- Show on XL - 1st Selection-->
+  <div class="d-none d-xl-block fluid-container mt-n3">
+    <div class="row no-gutters">
+      <div class="col-md-6 my-5">
+        <div class="menu-text flex-grow-1 py-3 px-5">
+          <h2 class="main-title text-left" style="font-size: calc(110% + 1vw + 1vh); font-weight: 700;">Hello, I'm John!</h2>
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left" >
+            <span style="font-size: 1.25rem;">
+               <br>I am a Director of User Experience and Sr. Solutions Architect at Epsilon a subsidiary of Publicis Groupe. I have 12 granted utility patents and am the author of 3 books on digital prototyping.
+               <br>
+               <br>
+               With over a decade innovating in technology as well as working with heterogeneous client and server configurations 
+               (Unix / Linux, Windows, Mac OS, iOS,  and Android), I've performed in various technology roles across 
+               multiple verticals spanning Telecommunications, Manufacturing, Consumer Package Goods, and Data Services. 
+               I have built numerous physical and digital prototypes to refine UI/UX and System innovations, communicate future concepts and empower users.<br>
+                <br>I also have a Masters Degree in Design Methods from The New Bauhaus at Illinois Tech Institute of Design.
+               </span></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="fill-xl row w-50 no-gutters">
+            <div class="col-md-6 my-auto">
+            <div class="fill h-100">
+         <!--   
+        <div class="menu-image h-100 d-flex align-items-start">
+          <img src="images/AboutMe/about_me_hero_x2.png" class="img-fluid" alt="menu image">
+        </div>
+        -->
+        </div>
+      </div>	
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- 2nd section - 1st Person Voice About Section - 1st style-->
+ 
+    <!-- Show on XS - 2nd section - 1st Person Voice About Section - 1st style-->
+      <div class="d-block d-sm-none background-light1-very-dark-grayish-blue-solid jumbotron rounded-0 mb-0 position-relative" style="width: 100%">
+    <section>
+  <div class="fluid-container mt-n3">
+    <div class="row no-gutters my-3">
+ <!-- Personal Image and Quote Section -->
+
+      <div class="my-auto">
+        <div class="menu-text flex-grow-1 mx-4 pt-4">
+          <h2 class="main-title text-left mr-5 pb-3" style="font-size: 2.75rem; font-weight: 700;">Designing for an inclusive future!</h2>
+</br>
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left font-weight-bold">From humble beginnings in rural Kentucky, I understand life's challenges. I am a living example that education and hard work can change one's station in life. 
+            I believe technology can be used for good and improve the lives of everyone. 
+I deeply love my wife, children, and family and believe together we can foster an inclusive society. 
+With empathy and innovation, I'm advancing this vision for our future.<br>
+            <br>
+            Childhood explorations with console tube radios and semi-conductors inspired a love for computers and gaming (Atari Basic, 5200 and Nintendo), electronics and audio. 
+I have hands-on experience with design and prototyping, manufacturing (testing for audio, vision systems, robotics and RF) as well as IP generation.<br>
+<br>I look forward to bringing my passion and dedication to help your organization achieve its vision.</p>
+
+          </div>
+        </div>
+      </div>
+      
+             <div>
+                     <!-- XS Only -->
+                     <div class="text-center d-block d-sm-none">
+                        <blockquote class="blockquote mx-auto mb-5 text-center">
+                           <h4 class="text-center mx-5"><img class="mt-5 mb-4 img-fluid" style="width:7em;" src="images/ExperienceCard/CaseStudy/Professional/EpsilonAutomotive/jk-headshot.png" alt="John Krahenbuhl Headshot Image"> <br>
+                              <strong>Prototyping innovative solutions daily!</strong>
+                           </h4>
+                           <footer class="blockquote-footer">John Krahenbuhl, <cite title="Source Title">Director UX, <br class="d-block d-md-none" style="font-size: calc(170% + 1vw + 1vh);">Sr Solutions Architect at Epsilon Automotive</cite></footer>
+                        </blockquote>
+                     </div>
+      </div>	
+      
+    </div>
+  </div>
+</section>
+ </div>
+
+
+  <!-- Show on SM - 2nd section - 1st Person Voice About Section - 1st style-->
+      <div class="d-none d-sm-block d-md-none background-light1-very-dark-grayish-blue-solid jumbotron rounded-0 mb-0 position-relative" style="width: 100%">
+    <section>
+  <div class="fluid-container mt-n3">
+    <div class="row no-gutters my-3">
+ <!-- Personal Image and Quote Section -->
+
+      <div class="col-md-12 my-auto">
+        <div class="menu-text flex-grow-1 py-0 px-3">
+          <h2 class="main-title text-left mr-5 pb-3" style="font-size: 2.75rem; font-weight: 700;">Designing for an inclusive future!</h2>
+</br>
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left font-weight-bold">From humble beginnings in rural Kentucky, I understand life's challenges. I am a living example that education and hard work can change one's station in life. 
+            I believe technology can be used for good and improve the lives of everyone. 
+I deeply love my wife, children, and family and believe together we can foster an inclusive society. 
+With empathy and innovation, I'm advancing this vision for our future.<br>
+            <br>
+            Childhood explorations with console tube radios and semi-conductors inspired a love for computers and gaming (Atari Basic, 5200 and Nintendo), electronics and audio.  
+I have hands-on experience with design and prototyping, manufacturing (testing for audio, vision systems, robotics and RF) as well as IP generation.<br>
+<br>I look forward to bringing my passion and dedication to help your organization achieve its vision.</p>
+
+          </div>
+        </div>
+      </div>
+      
+             <div class="col-12">
+                     <!-- SM Only -->
+                     <div class="text-center">
+                        <blockquote class="blockquote mx-auto mb-4 text-center">
+                           <h4 class="text-center mx-5"><img class="mt-5 mb-4 pb-2 img-fluid" src="images/ExperienceCard/CaseStudy/Professional/EpsilonAutomotive/jk-headshot.png" alt="John Krahenbuhl Headshot Image" style="width:40%;"> <br>
+                              <strong>Prototyping innovative solutions daily!</strong>
+                           </h4>
+                           <footer class="blockquote-footer">John Krahenbuhl, <cite title="Source Title">Director UX, <br class="d-block d-md-none" style="font-size: calc(170% + 1vw + 1vh);">Sr Solutions Architect at Epsilon Automotive</cite></footer>
+                        </blockquote>
+                     </div>
+                     <!-- LG Only -->
+                     <div class="text-center d-none d-lg-block d-xl-none mb-n4">
+                        <blockquote class="blockquote mx-auto mb-5 text-center">
+                           <h4 class="text-center mx-5"><img class="mt-4 mb-4 img-fluid" src="images/ExperienceCard/CaseStudy/Professional/EpsilonAutomotive/jk-headshot.png" alt="John Krahenbuhl Headshot Image" style="width:30%;"> <br>
+                              <strong>Prototyping innovative solutions daily!</strong>
+                           </h4>
+                           <footer class="blockquote-footer">John Krahenbuhl, <cite title="Source Title">Director UX, <br class="d-block d-md-none" style="font-size: calc(170% + 1vw + 1vh);"><br>Sr Solutions Architect at Epsilon Automotive</cite></footer>
+                        </blockquote>
+                     </div>
+      </div>	
+      
+    </div>
+  </div>
+</section>
+ </div> 
+  <!-- Show on MD & LG - 2nd section - 1st Person Voice About Section - 1st style-->
+      <div class="d-none d-md-block d-xl-none background-light1-very-dark-grayish-blue-solid jumbotron rounded-0 mb-0 position-relative" style="width: 100%">
+    <section id="">
+  <div class="fluid-container mt-n3">
+    <div class="row no-gutters my-3">
+ <!-- Personal Image and Quote Section -->
+
+      <div class="col-md-12 my-auto">
+        <div class="menu-text flex-grow-1 py-0 px-3">
+          <h2 class="main-title text-left mr-5 pb-3" style="font-size: 2.75rem; font-weight: 700;">Designing for an inclusive future!</h2>
+</br>
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left font-weight-bold">From humble beginnings in rural Kentucky, I understand life's challenges. I am a living example that education and hard work can change one's station in life. 
+            I believe technology can be used for good and improve the lives of everyone. 
+I deeply love my wife, children, and family and believe together we can foster an inclusive society. 
+With empathy and innovation, I'm advancing this vision for our future.<br>
+            <br>
+            Childhood explorations with console tube radios and semi-conductors inspired a love for computers and gaming (Atari Basic, 5200 and Nintendo), electronics and audio. 
+I have hands-on experience with design and prototyping, manufacturing (testing for audio, vision systems, robotics and RF) as well as IP generation.<br>
+<br>I look forward to bringing my passion and dedication to help your organization achieve its vision.</p>
+
+          </div>
+        </div>
+      </div>
+      
+             <div class="col-md-12">
+                     <!-- MD Only -->
+                     <div class="text-center d-none d-md-block d-lg-none">
+                        <blockquote class="blockquote mx-auto mb-5 text-center">
+                           <h4 class="text-center mx-5"><img class="mt-5 mb-4 pb-2 img-fluid" src="images/ExperienceCard/CaseStudy/Professional/EpsilonAutomotive/jk-headshot.png" alt="John Krahenbuhl Headshot Image" style="width:30%;"> <br>
+                              <strong>Prototyping innovative solutions daily!</strong>
+                           </h4>
+                           <footer class="blockquote-footer">John Krahenbuhl, <cite title="Source Title">Director UX, <br class="d-block d-md-none" style="font-size: calc(170% + 1vw + 1vh);">Sr Solutions Architect at Epsilon Automotive</cite></footer>
+                        </blockquote>
+                     </div>
+                     <!-- LG Only -->
+                     <div class="text-center d-none d-lg-block d-xl-none mb-n4">
+                        <blockquote class="blockquote mx-auto mb-5 text-center">
+                           <h4 class="text-center mx-5"><img class="mt-4 mb-4 img-fluid" src="images/ExperienceCard/CaseStudy/Professional/EpsilonAutomotive/jk-headshot.png" alt="John Krahenbuhl Headshot Image" style="width:30%;"> <br>
+                              <strong>Prototyping innovative solutions daily!</strong>
+                           </h4>
+                           <footer class="blockquote-footer">John Krahenbuhl, <cite title="Source Title">Director UX, <br class="d-block d-md-none" style="font-size: calc(170% + 1vw + 1vh);"><br>Sr Solutions Architect at Epsilon Automotive</cite></footer>
+                        </blockquote>
+                     </div>
+      </div>	
+      
+    </div>
+  </div>
+</section>
+ </div>
+ <!-- Show on XL - 2nd section - 1st Person Voice About Section - 1st style-->
+      <div class="d-none d-xl-block background-light1-very-dark-grayish-blue-solid jumbotron rounded-0 mb-0 position-relative" style="width: 100%">
+    <section id="">
+  <div class="fluid-container mt-n3">
+    <div class="row no-gutters my-3">
+ <!-- Personal Image and Quote Section -->
+             <div class="col-md-3">
+                     <!-- XL Only -->
+                     <div class="text-center d-none d-xl-block mt-5 pt-5">
+                     <div class="mt-3 pt-0">
+                        <blockquote class="blockquote mx-auto text-center">
+                           <h5 class="text-center mx-auto"><img class="mx-auto mb-3 img-fluid" src="images/ExperienceCard/CaseStudy/Professional/EpsilonAutomotive/jk-headshot.png" alt="John Krahenbuhl Headshot Image" style="width:6.0em;"> <br>
+                              <strong>Prototyping innovation daily!</strong>
+                           </h5>
+                           <footer class="blockquote-footer">John Krahenbuhl<br><cite title="Source Title">Innovator and Author</cite></footer>
+                        </blockquote>
+                        </div>
+                     </div>
+      </div>	
+ 
+      <div class="col-md my-auto">
+        <div class="menu-text flex-grow-1 py-2 pl-5">
+          <h2 class="main-title text-left ml-0 pb-2" style="font-size: 2.75rem; font-weight: 700;">Designing for an inclusive future!</h2>
+</br>
+          <div class="d-flex justify-content-start">
+            <p class="lead text-left font-weight-bold mr-4 pr-5">From humble beginnings in rural Kentucky, I understand life's challenges. I am a living example that education and hard work can change one's station in life. 
+            I believe technology can be used for good and improve the lives of everyone. 
+I deeply love my wife, children, and family and believe together we can foster an inclusive society. 
+With empathy and innovation, I'm advancing this vision for our future.<br>
+            <br>
+            Childhood explorations with console tube radios and semi-conductors inspired a love for computers and gaming (Atari Basic, 5200 and Nintendo), electronics and audio. 
+I have hands-on experience with design and prototyping, manufacturing (testing for audio, vision systems, robotics and RF) as well as IP generation.<br>
+<br>I look forward to bringing my passion and dedication to help your organization achieve its vision.</p>
+
+          </div>
+        </div>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+ </div>
+ 
+ 
+  
+<!-- 3rd section - Collaborator Reference Quote Section -->
+<!-- Removed -->
+
+
+
+<!--  4th section - CTA for Section 1 -->
+<!-- Removed -->
+
+
+
+<!--  5th section - Section Header for Section 2 -->
+
+      <!-- Removed -->
+   
+         
+         
+<!--  6th section - Worked With Logo Grids -->
+
+      
+ 
+        
+      <!-- 7th Section - Second CTA Section -->
+      <!-- Show on XS - 7th section - Second CTA Section -->
+      <div class="d-block d-sm-none col-12 text-center mx-auto background-PeriwinkleBlue-solid jumbotron jumbotron-fluid mb-5 position-relative">
+      <div>  <!-- <div style="margin-left: -3.6rem !important;"> -->
+                           <div class="row text-center">
+                        <div class="text-center mt-0 mb-3 mb-md-0 mb-xl-3 pb-4 pb-md-0 pb-xl-4 mx-auto" style="font-size: 2.75em;"><strong>Contact me<br>Today!</strong>
+                        </div>
+                     </div>
+                     <p class="lead text-center font-weight-bold mx-auto px-5" style="margin-bottom: 0px;">Let's discuss your business challenges and<br>how I can deliver results for your organization!</p> <br>
+
+                     <div class="text-center">
+                        <blockquote class="blockquote mx-auto mb-1 text-center">
+                           <!-- 
+                           <h4 class="text-center mx-5"><img class="mt-5 mb-4 ml-sm-0 img-fluid" src="images/AboutMe/jk-headshot-vertical-x2.png" alt="John Krahenbuhl Headshot Image" style="width:7.5em; border-radius: 50%;"> <br> </h4>
+-->
+<div class="container col-12">        
+  <table class="table table-sm table-borderless">
+    <tbody class="text-center mx-auto">
+      <tr>
+       <div class="nav-item" id="navbar-brand-mail"><a class="nav-link" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank"><i class="mainCTA fas fa-envelope  .d-none" style="font-size: 1.5em;"></i></a> </div>
+       <div class="nav-item" id="navbar-brand-linkedin"><a class="nav-link" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank"><i class="mainCTA fab fa-linkedin" style="font-size: 1.7em;"></i></a> </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          
+                           </h4>
+                           <footer class="blockquote-footer mt-4">John Krahenbuhl, <cite title="Source Title">Director UX,<br>Sr Solutions Architect</cite></footer>
+                        </blockquote>
+                     </div>
+ </div></div>  
+      <!-- Show on SM & MD & LG - 7th section - Second CTA Section -->
+      <div class="d-none d-sm-block d-xl-none col-12 text-center mx-auto background-PeriwinkleBlue-solid jumbotron jumbotron-fluid mb-5 position-relative">
+      <div>  <!-- <div style="margin-left: -3.6rem !important;"> -->
+                           <div class="row text-center">
+                        <div class="text-center mt-n3 mb-3 mb-md-0 mb-xl-3 pb-4 pb-md-0 pb-xl-4 mx-auto" style="font-size: 2.75em;"><strong>Contact me Today!</strong>
+                        </div>
+                     </div>
+                     <p class="lead text-center font-weight-bold mt-5 mx-auto px-5" style="margin-bottom: 0px;">Let's discuss your business challenges and<br>how I can deliver results for your organization!</p> <br>
+
+                     <div class="text-center">
+                        <blockquote class="blockquote mx-auto mb-1 text-center">
+<!--
+                           <h4 class="text-center mx-5"><img class="mt-5 mb-4 ml-sm-0 img-fluid" src="images/AboutMe/jk-headshot-vertical-x2.png" alt="John Krahenbuhl Headshot Image" style="width:30%; border-radius: 50%;"> <br> </h4>
+-->
+        
+
+
+<div class="container col-12">        
+  <table class="table table-sm table-borderless">
+    <tbody class="text-center mx-auto">
+      <tr>
+       <div class="nav-item" id="navbar-brand-mail"><a class="nav-link" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank"><i class="mainCTA fas fa-envelope  .d-none" style="font-size: 1.5em;"></i></a> </div>
+       <div class="nav-item" id="navbar-brand-linkedin"><a class="nav-link" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank"><i class="mainCTA fab fa-linkedin" style="font-size: 1.7em;"></i></a> </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          
+                           </h4>
+                           <footer class="blockquote-footer mt-4">John Krahenbuhl, <cite title="Source Title">Director UX,<br>Sr Solutions Architect</cite></footer>
+                        </blockquote>
+                     </div>
+ </div></div>    
+      <!-- Show on XL - 7th section - Second CTA Section -->
+      <div class="d-none d-xl-block col-12 text-center mx-auto background-PeriwinkleBlue-solid jumbotron jumbotron-fluid mb-5 position-relative">
+      <div>   <!-- <div style="margin-left: -5.2rem !important;"> -->
+                           <div class="row text-center">
+                        <div class="text-center mt-n2 mb-3 mb-md-0 mb-xl-3 pb-4 pb-md-0 pb-xl-4 mx-auto mt-4" style="font-size: 2.75em;"><strong>Contact me Today!</strong>
+                        </div>
+                     </div>
+                     <p class="lead text-center font-weight-bold mx-auto px-5" style="margin-bottom: 0px;">Let's discuss your business challenges and<br>how I can deliver results for your organization!</p> <br>
+                     <!-- XL Only -->
+                     <div class="text-center d-none d-xl-block">
+                        <blockquote class="blockquote mx-auto mb-5 text-center">
+                           <!--
+                           <h4 class="text-center mx-5"><img class="mt-5 mb-3 ml-sm-0 img-fluid" src="images/AboutMe/jk-headshot-vertical-x2.png" alt="John Krahenbuhl Headshot Image" style="width:7em; border-radius: 50%;"> <br> </h4>
+                           -->   
+                           <strong> <ul class="nav navbar-nav row flex-row justify-content-md-center justify-content-start flex-nowrap ml-auto">
+               <li class="nav-item ml-3 pl-4" id="navbar-brand-mail"><a class="nav-link" href="mailto:john.krahenbuhl@gmail.com?Subject=Your%20Portfolio" target="_blank"><i class="mainCTA fas fa-envelope  .d-none" style="font-size: 1.5em; margin-right: 24px;"></i></a> </li>
+               <li class="nav-item ml-5" id="navbar-brand-linkedin"><a class="nav-link" href="https://www.linkedin.com/in/johnkrahenbuhl/" target="_blank"><i class="mainCTA fab fa-linkedin" style="font-size: 1.5em; margin-right: 48px;"></i></a> </li>
+            </ul></strong>
+                           </h4>
+                           <footer class="blockquote-footer mt-4">John Krahenbuhl, <cite title="Source Title">Director UX,<br>Sr Solutions Architect</cite></footer>
+                        </blockquote>
+                     </div>
+ </div></div>
+     
+     
+                 
+<!-- Third Section - Footer Section -->
+      <div class="text-center mx-auto mt-n2 mt-sm-0 mt-md-n5 pt-md-2 mb-5 mb-sm-1 pb-4">
+      <div class="mx-auto mt-5 pt-3" style="height: 20px; color: rgba(255,255,255,.65); font-size: .75em;">Copyright © 2021 John Henry Krahenbuhl. All rights reserved.</div>
+      </div>
+      <!-- Section Padding -->
+<!--      <div id="bottom-padding-tablet-mobile" class="pb-2"></div>  -->
+      
+      </div>
+      </div>
+      </div>
+      </header>
+      </div>
+      <footer class="clamped clamped--bottom clamped--fixed">
+         <!-- Background color to minimize effects of Rubber Banding on iOS and Android Devices -->
+      </footer>
+      <!-- Load JS last to improve perceived page load -->   
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--      <script src="js/portfolio.min.js"></script>  -->
+      <script src="js/portfolio.js"></script>
+   </body>
+</html>
